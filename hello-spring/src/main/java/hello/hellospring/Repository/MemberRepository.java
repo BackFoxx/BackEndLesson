@@ -1,3 +1,4 @@
+//리포지토리 관련 인터페이스
 package hello.hellospring.Repository;
 
 
