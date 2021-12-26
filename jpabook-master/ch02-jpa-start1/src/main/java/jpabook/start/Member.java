@@ -1,23 +1,39 @@
 package jpabook.start;
 
+import java.util.Date;
 import javax.persistence.*;  //**
 
-/**
- * User: HolyEyE
- * Date: 13. 5. 24. Time: 오후 7:43
- */
-@Entity
-@Table(name="MEMBER")
+@Entity(name="Member")
+@TableGenerator (
+		name = "BOARD_SEQ_GENERATOR",
+		table = "BOARD_SEQ",
+		initialValue = 1, allocationSize = 1
+)
+
 public class Member {
 
     @Id
+    @GeneratedValue
     @Column(name = "ID")
     private String id;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false, length = 10)
     private String username;
 
+    @Column(name = "AGE")
     private Integer age;
+    
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+    
+    @Lob
+    private String description;
 
     public String getId() {
         return id;
@@ -42,4 +58,11 @@ public class Member {
     public void setAge(Integer age) {
         this.age = age;
     }
+    
+    public enum RoleType {
+    	ADMIN, USER
+    }
+    
 }
+
+
