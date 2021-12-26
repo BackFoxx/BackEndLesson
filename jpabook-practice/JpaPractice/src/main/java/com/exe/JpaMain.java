@@ -1,5 +1,8 @@
 package com.exe;
 
+import com.entity.Member;
+import com.entity.Order;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -19,13 +22,23 @@ public class JpaMain
 
         try {
             transaction.begin();
-            System.out.println("안녕");
+            logic(manager);
             transaction.commit();
+            System.out.println("성공");
         } catch (Exception e) {
             transaction.rollback();
+            System.out.println("실패");
         } finally {
           manager.close();
         }
         factory.close();
+    }
+
+    public static void logic(EntityManager entityManager) {
+        Member member1 = new Member();
+        member1.setName("김철수");
+        member1.setCity("서울");
+        member1.setStreet("태해란로");
+        entityManager.persist(member1);
     }
 }
