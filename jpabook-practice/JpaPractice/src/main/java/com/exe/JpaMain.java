@@ -35,10 +35,6 @@ public class JpaMain
     }
 
     public static void logic(EntityManager entityManager) {
-        Member member1 = new Member();
-        member1.setName("김철수");
-        member1.setCity("서울");
-        member1.setStreet("태해란로");
-        entityManager.persist(member1);
+
     }
 }

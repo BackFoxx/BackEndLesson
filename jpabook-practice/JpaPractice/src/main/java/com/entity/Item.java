@@ -1,9 +1,7 @@
 package com.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Item {
@@ -11,6 +9,9 @@ public class Item {
     @GeneratedValue
     @Column(name = "ITEM_ID")
     private Long id;
+
+    @OneToMany(mappedBy = "item")
+    private List<Category_Item> category_items;
 
     private String name;
     private int price;
@@ -46,5 +47,13 @@ public class Item {
 
     public void setStockQuantity(int stockQuantity) {
         this.stockQuantity = stockQuantity;
+    }
+
+    public List<Category_Item> getCategory_items() {
+        return category_items;
+    }
+
+    public void setCategory_items(List<Category_Item> category_items) {
+        this.category_items = category_items;
     }
 }
