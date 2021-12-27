@@ -1,5 +1,7 @@
 package com.entity;
 
+import com.entity.item.Item;
+
 import javax.persistence.*;
 
 @Entity

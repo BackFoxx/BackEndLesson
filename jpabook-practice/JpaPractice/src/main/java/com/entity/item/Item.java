@@ -1,21 +1,27 @@
-package com.entity;
+package com.entity.item;
+
+import com.entity.Category;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
+public abstract class Item {
+
     @Id
     @GeneratedValue
     @Column(name = "ITEM_ID")
     private Long id;
 
-    @OneToMany(mappedBy = "item")
-    private List<Category_Item> category_items;
-
     private String name;
     private int price;
     private int stockQuantity;
+
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<Category>();
 
     public Long getId() {
         return id;
@@ -49,11 +55,11 @@ public class Item {
         this.stockQuantity = stockQuantity;
     }
 
-    public List<Category_Item> getCategory_items() {
-        return category_items;
+    public List<Category> getCategories() {
+        return categories;
     }
 
-    public void setCategory_items(List<Category_Item> category_items) {
-        this.category_items = category_items;
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }

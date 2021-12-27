@@ -1,5 +1,7 @@
 package com.entity;
 
+import com.entity.item.Item;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
 @Entity
 @Table(name = "CATEGORY")
 public class Category {
+
     @Id
     @GeneratedValue
     @Column(name = "CATEGORY_ID")
@@ -14,8 +17,11 @@ public class Category {
 
     private String name;
 
-    @OneToMany(mappedBy = "category")
-    private List<Category_Item> category_items;
+    @ManyToMany
+    @JoinTable(name = "CATEGORY_ITEM",
+            joinColumns = @JoinColumn(name = "CATEGORY_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
+    private List<Item> items = new ArrayList<Item>();
 
     public Long getId() {
         return id;
@@ -45,12 +51,8 @@ public class Category {
         child.setParent(this);
     }
 
-    public List<Category_Item> getCategory_items() {
-        return category_items;
-    }
-
-    public void setCategory_items(List<Category_Item> category_items) {
-        this.category_items = category_items;
+    public void addItem(Item item) {
+        items.add(item);
     }
 
     public Category getParent() {
@@ -67,5 +69,13 @@ public class Category {
 
     public void setChild(List<Category> child) {
         this.child = child;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 }
