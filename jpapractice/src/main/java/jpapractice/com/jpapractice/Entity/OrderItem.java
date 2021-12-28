@@ -20,6 +20,7 @@ public class OrderItem {
     private int orderPrice;
     private int count;
 
+    //GETTER AND SETTER
     public Long getId() {
         return id;
     }
