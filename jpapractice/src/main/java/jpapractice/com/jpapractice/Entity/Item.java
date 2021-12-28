@@ -1,5 +1,7 @@
 package jpapractice.com.jpapractice.Entity;
 
+import jpapractice.com.jpapractice.exception.NotEnoughStockException;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,20 @@ public abstract class Item {
     inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
     private List<Category> categories = new ArrayList<Category>();
 
+    //LOGIC
+    public void addStock(int stockQuantity) {
+        this.stockQuantity += stockQuantity;
+    }
+
+    public void removeStock(int stockQuantity) {
+        int restStock = this.stockQuantity - stockQuantity;
+        if (restStock < 0) {
+            throw new NotEnoughStockException("need more stock");
+        }
+        this.stockQuantity = restStock;
+    }
+
+    //GETTER AND SETTER
     public Long getId() {
         return id;
     }
