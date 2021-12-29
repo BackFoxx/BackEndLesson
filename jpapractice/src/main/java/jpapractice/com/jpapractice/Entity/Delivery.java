@@ -17,9 +17,23 @@ public class Delivery {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
-    private enum DeliveryStatus {
+    enum DeliveryStatus {
         READY, COMP
     }
+
+    ///LOGIC
+
+
+    public Delivery() {
+    }
+
+    public Delivery(Address address) {
+        this.address = address;
+        this.status = DeliveryStatus.READY;
+    }
+
+
+    //GETTER AND SETTER
 
     public Long getId() {
         return id;
