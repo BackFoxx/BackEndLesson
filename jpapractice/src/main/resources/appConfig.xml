@@ -12,6 +12,17 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="1" />
+    </bean>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+        <property name="cache" value="false" />
+        <property name="order" value="2" />
+    </bean>
+
     <!-- JPA 예외를 스프링 예외로 변환 -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
