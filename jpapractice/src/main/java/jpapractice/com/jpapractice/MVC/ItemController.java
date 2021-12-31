@@ -15,6 +15,13 @@ public class ItemController {
     @Autowired
     Itemservice itemservice;
 
+    @GetMapping("/test")
+    public ModelAndView MD() {
+        ModelAndView md = new ModelAndView();
+        md.setViewName("items/createItemForm");
+        return md;
+    }
+
     @GetMapping("/items/new")
     public String createForm() {
         return "items/createItemForm";
