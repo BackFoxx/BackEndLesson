@@ -3,6 +3,7 @@ package yonghan.core.singleton;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import yonghan.core.AppConfig;
 import yonghan.core.member.MemberService;
 
@@ -31,5 +32,16 @@ public class SingletonTest {
         System.out.println("singleTonService2 = " + singleTonService2);
 
         assertThat(singleTonService1).isSameAs(singleTonService2);
+    }
+
+    @Test
+    @DisplayName("스프링 컨테이너와 싱글톤")
+    void springContainer() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = ac.getBean("memberService", MemberService.class);
+        MemberService memberService2 = ac.getBean("memberService", MemberService.class);
+
+        System.out.println("memberService = " + memberService);
+        System.out.println("memberService2 = " + memberService2);
     }
 }
