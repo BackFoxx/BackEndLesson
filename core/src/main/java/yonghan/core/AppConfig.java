@@ -3,6 +3,7 @@ package yonghan.core;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import yonghan.core.discount.DiscountPolicy;
+import yonghan.core.discount.FixDiscountPolicy;
 import yonghan.core.discount.RateDiscountPolicy;
 import yonghan.core.member.MemberRepository;
 import yonghan.core.member.MemberService;
@@ -11,7 +12,7 @@ import yonghan.core.member.MemoryMemberRepository;
 import yonghan.core.order.OrderService;
 import yonghan.core.order.OrderServiceImpl;
 
-@Configuration
+//@Configuration
 public class AppConfig {
 
     @Bean
@@ -31,7 +32,6 @@ public class AppConfig {
 
     @Bean
     public DiscountPolicy discountPolicy() {
-//        return new FixDiscountPolicy();
-        return null;
+        return new FixDiscountPolicy();
     }
 }

@@ -18,8 +18,6 @@ public class AutoAppConfigTest {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
 
         OrderServiceImpl orderServiceImpl = ac.getBean("orderServiceImpl", OrderServiceImpl.class);
-        MemberRepository memberRepository = orderServiceImpl.getMemberRepository();
-        assertThat(memberRepository).isInstanceOf(MemoryMemberRepository.class);
 
     }
 }
