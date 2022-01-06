@@ -1,8 +1,11 @@
 package yonghan.core.discount;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import yonghan.core.member.Grade;
 import yonghan.core.member.Member;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFixAmount = 1000;

@@ -1,10 +1,13 @@
 package yonghan.core.discount;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import yonghan.core.member.Grade;
 import yonghan.core.member.Member;
 
 @Component
+@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

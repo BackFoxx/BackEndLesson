@@ -1,7 +1,9 @@
 package yonghan.core.order;
 
 import com.sun.source.doctree.UsesTree;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import yonghan.core.discount.DiscountPolicy;
 import yonghan.core.member.Member;
@@ -18,13 +20,13 @@ public class OrderServiceImpl implements OrderService {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
-    //생성자로 주입
 
-
+    //    @Autowired
 //    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
 //        this.discountPolicy = discountPolicy;
 //    }
 //
+//    @Autowired
 //    public void setMemberRepository(MemberRepository memberRepository) {
 //        this.memberRepository = memberRepository;
 //    }
