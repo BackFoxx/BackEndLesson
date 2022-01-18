@@ -1,5 +1,6 @@
 package jpaclass.jpashop.service;
 
+import jpaclass.jpashop.domain.item.Book;
 import jpaclass.jpashop.domain.item.Item;
 import jpaclass.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
