@@ -26,8 +26,10 @@ body {
 }
 
 .menuButton > a {
+  color: #000000;
   padding: 6px 30px;
   display: block;
+  text-decoration-line: none;
 }
 
 /* 본문 */
@@ -37,9 +39,12 @@ body {
   margin: 5px 10px;
 }
 
+.content_Index {
+  text-align: center;
+}
+
 .content {
   padding: 30px 10px;
-  text-align: center;
 }
 
 .content_menu {
@@ -85,9 +90,9 @@ footer > span {
 }
 
 .email {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .address {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
