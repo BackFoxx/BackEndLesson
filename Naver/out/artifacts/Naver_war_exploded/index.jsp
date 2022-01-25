@@ -12,5 +12,19 @@
   </head>
   <body>
   $END$
+
+  <%
+    System.out.println("뭄무");
+  %>
+
+  <%!
+    public void jspInit() {
+      System.out.println("인잇!!");
+    }
+
+    public void jspDestroy() {
+      System.out.println("디스트로이이");
+    }
+  %>
   </body>
 </html>
