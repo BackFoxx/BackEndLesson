@@ -4,6 +4,7 @@ import dto.TodoDto;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -16,13 +17,13 @@ class TodoDaoTest {
     @Test
     public void Todo삽입_조회() {
         TodoDto dto = new TodoDto();
-        dto.setName("김수현");
-        dto.setTitle("밥 만들기");
+        dto.setName("밈모");
+        dto.setTitle("짱구 굴리기");
         dto.setSequence(1);
 
         TodoDto dto2 = new TodoDto();
-        dto2.setName("햇반");
-        dto2.setTitle("설거지 하기");
+        dto2.setName("승우아빠");
+        dto2.setTitle("밥하기");
         dto2.setSequence(2);
 
         dao.addTodo(dto);
@@ -56,6 +57,21 @@ class TodoDaoTest {
         TodoDto two = dao.findOne(id);
         System.out.println("two.getTitle() = " + two.getTitle());
         System.out.println("two.getType() = " + two.getType());
+
+    }
+
+    @Test
+    public void Todo거르기() {
+        List<TodoDto> todo = dao.getTodo();
+
+        List<TodoDto> list = new ArrayList<>();
+        for (TodoDto dto : todo) {
+            if (dto.getType().equals("TODO")) {
+                list.add(dto);
+            }
+        }
+
+        System.out.println("list = " + list.toString());
 
     }
 

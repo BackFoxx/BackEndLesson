@@ -1,6 +1,6 @@
 package dto;
 
-public class TodoDto {
+public class TodoDto{
     private Long id;
     private String name;
     private String title;
@@ -80,4 +80,14 @@ public class TodoDto {
                 ", regDate='" + regDate + '\'' +
                 '}';
     }
+
+//    @Override
+//    public int compareTo(TodoDto o) {
+//        if (o.getSequence() < sequence) {
+//            return 1;
+//        } else if (o.getSequence() > sequence) {
+//            return -1;
+//        }
+//        return 0;
+//    }
 }

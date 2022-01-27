@@ -1,0 +1,83 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    position: relative;
+}
+
+/* 네비게이션 */
+
+.title {
+    color: #345461;
+    font-size: 30px;
+    display: inline-block;
+
+    transform: rotate(-30deg);
+    float: left;
+    margin-top: 5%;
+}
+
+.title_todoBtn {
+    background-color: #20adee;
+    font-size: 20px;
+    color: white;
+
+    border: lightgrey;
+    padding: 10px 30px 10px 30px;
+    margin-top: 5%;
+
+    float: right;
+}
+
+/* 섹션 */
+
+.Sections {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+}
+
+.Section {
+    width: 30%;
+    margin-left: 10px;
+    display: inline-block;
+    float: right;
+}
+
+.Section_title_box {
+    background-color: #345461;
+    color: white;
+
+    margin-top: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.Section_todo_box {
+    background-color: #cee5ef;
+    position: relative;
+
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.todo_title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.todo_desc {
+    font-size: 15px;
+}
+
+.todo_btn {
+    position: absolute;
+    padding: 5px 10px;
+    right: 10px;
+}
