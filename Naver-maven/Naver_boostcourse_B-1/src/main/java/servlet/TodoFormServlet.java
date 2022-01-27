@@ -5,10 +5,11 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "TodoFormServlet", value = "/TodoForm")
+@WebServlet(name = "TodoFormServlet", value = "/todoform")
 public class TodoFormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/todoForm.jsp");
+        requestDispatcher.forward(request, response);
     }
 }
