@@ -5,7 +5,7 @@ function todoType(e) {
     const http = new XMLHttpRequest();
     const todoId = e.target.getAttribute("todo_id");
 
-    http.onreadystatechange = () => {
+    http.onreadystatechange = (e) => {
         if (http.readyState === http.DONE) {
             if (http.status === 200 || http.status === 201) {
                 console.log("SUCCESS!");
@@ -19,6 +19,5 @@ function todoType(e) {
     http.send();
 }
 
-function todoMainUpdate() {
-
+function todoMainUpdate(e) {
 }

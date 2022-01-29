@@ -1,16 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.util.List" %>
-<%@ page import="dto.TodoDto" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: PC
   Date: 2022-01-27
   Time: 오전 7:16
   To change this template use File | Settings | File Templates.
 --%>
-<%
-    List<TodoDto> dtos = (List<TodoDto>) request.getAttribute("todo");
-%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -27,64 +22,40 @@
 
     <section id="Section_done" class="Section">
         <div class="Section_title_box">DONE</div>
-        <%
-            List<TodoDto> doneList = new ArrayList<>();
-            for (TodoDto dto : dtos) {
-                if (dto.getType().equals("DONE")) {
-                    doneList.add(dto);
-                }
-            }
-
-            request.setAttribute("DONE", doneList);
-        %>
-        <c:forEach var="donelists" items="${DONE}">
-            <div class="Section_todo_box">
-                <span class="todo_title">${donelists.title}</span>
-                <span class="todo_desc">${donelists.regDate}, ${donelists.name}, ${donelists.sequence}</span>
-            </div>
+        <c:forEach var="donelists" items="${requestScope.todo}">
+            <c:if test="${donelists.type eq 'DONE'}">
+                <div class="Section_todo_box">
+                    <span class="todo_title">${donelists.title}</span>
+                    <span class="todo_desc">${donelists.regDate}, ${donelists.name}, ${donelists.sequence}</span>
+                    </div>
+            </c:if>
         </c:forEach>
     </section>
 
     <section id="Section_doing" class="Section">
         <div class="Section_title_box">DOING</div>
-        <%
-            List<TodoDto> doingList = new ArrayList<>();
-            for (TodoDto dto : dtos) {
-                if (dto.getType().equals("DOING")) {
-                    doingList.add(dto);
-                }
-            }
-
-            request.setAttribute("DOING", doingList);
-        %>
-        <c:forEach var="doinglists" items="${DOING}">
-            <div class="Section_todo_box">
-                <span class="todo_title">${doinglists.title}</span>
-                <span class="todo_desc">${doinglists.regDate}, ${doinglists.name}, ${doinglists.sequence}</span>
-                <button todo_id="${doinglists.id}" class="todo_btn">→</button>
-            </div>
+        <c:forEach var="doinglists" items="${requestScope.todo}">
+            <c:if test="${doinglists.type eq 'DOING'}">
+                <div class="Section_todo_box">
+                    <span class="todo_title">${doinglists.title}</span>
+                    <span class="todo_desc">${doinglists.regDate}, ${doinglists.name}, ${doinglists.sequence}</span>
+                    <button todo_id="${doinglists.id}" class="todo_btn">→</button>
+                </div>
+            </c:if>
         </c:forEach>
     </section>
 
     <section id="Section_todo" class="Section">
 
         <div class="Section_title_box">TODO</div>
-        <%
-            List<TodoDto> todoList = new ArrayList<>();
-            for (TodoDto dto : dtos) {
-                if (dto.getType().equals("TODO")) {
-                    todoList.add(dto);
-                }
-            }
-
-            request.setAttribute("TODO", todoList);
-        %>
-        <c:forEach var="todolists" items="${TODO}">
-            <div class="Section_todo_box">
-                <span class="todo_title">${todolists.title}</span>
-                <span class="todo_desc">${todolists.regDate}, ${todolists.name}, ${todolists.sequence}</span>
-                <button todo_id="${todolists.id}" class="todo_btn">→</button>
-            </div>
+        <c:forEach var="todolists" items="${requestScope.todo}">
+            <c:if test="${todolists.type eq 'TODO'}">
+                <div class="Section_todo_box">
+                    <span class="todo_title">${todolists.title}</span>
+                    <span class="todo_desc">${todolists.regDate}, ${todolists.name}, ${todolists.sequence}</span>
+                    <button todo_id="${todolists.id}" class="todo_btn">→</button>
+                </div>
+            </c:if>
         </c:forEach>
     </section>
 
