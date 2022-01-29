@@ -10,10 +10,32 @@
 
 .form_title {
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .form_textInput {
     font-size: 20px;
     width: 100%;
     height: 2.5em;
+    padding-left: 10px;
+}
+
+.form_textRadio_label {
+    margin-right: 20px;
+}
+
+.form_submitSection > input[type="submit"] {
+    margin-top: 40px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.form_submitSection_prevBtn {
+    background-color: white;
+    text-decoration-line: underline;
+}
+
+.form_submitSection_submitBtn {
+    float: right;
+    margin-left: 2%;
 }

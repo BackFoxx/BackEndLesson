@@ -24,7 +24,7 @@ public class TodoDao {
         }
 
         try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
-             PreparedStatement ps = conn.prepareStatement("select id, title, name, sequence, type, regdate from todo order by regdate desc"))
+             PreparedStatement ps = conn.prepareStatement("select id, title, name, sequence, type, regdate from todo order by id"))
         {
             try (ResultSet rs = ps.executeQuery()) {
 

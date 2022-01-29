@@ -12,6 +12,7 @@
     List<TodoDto> dtos = (List<TodoDto>) request.getAttribute("todo");
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -20,11 +21,11 @@
 <body>
 <nav class="navigation">
     <h2 class="title">나의 해야할 일들</h2>
-    <button class="title_todoBtn">새로운 Todo 등록</button>
+    <a href="/todo" class="title_todoBtn">새로운 Todo 등록</a>
 </nav>
 <div class="Sections">
 
-    <section class="Section">
+    <section id="Section_done" class="Section">
         <div class="Section_title_box">DONE</div>
         <%
             List<TodoDto> doneList = new ArrayList<>();
@@ -40,12 +41,11 @@
             <div class="Section_todo_box">
                 <span class="todo_title">${donelists.title}</span>
                 <span class="todo_desc">${donelists.regDate}, ${donelists.name}, ${donelists.sequence}</span>
-                <button class="todo_btn">→</button>
             </div>
         </c:forEach>
     </section>
 
-    <section class="Section">
+    <section id="Section_doing" class="Section">
         <div class="Section_title_box">DOING</div>
         <%
             List<TodoDto> doingList = new ArrayList<>();
@@ -61,12 +61,12 @@
             <div class="Section_todo_box">
                 <span class="todo_title">${doinglists.title}</span>
                 <span class="todo_desc">${doinglists.regDate}, ${doinglists.name}, ${doinglists.sequence}</span>
-                <button class="todo_btn">→</button>
+                <button todo_id="${doinglists.id}" class="todo_btn">→</button>
             </div>
         </c:forEach>
     </section>
 
-    <section class="Section">
+    <section id="Section_todo" class="Section">
 
         <div class="Section_title_box">TODO</div>
         <%
@@ -83,11 +83,13 @@
             <div class="Section_todo_box">
                 <span class="todo_title">${todolists.title}</span>
                 <span class="todo_desc">${todolists.regDate}, ${todolists.name}, ${todolists.sequence}</span>
-                <button class="todo_btn">→</button>
+                <button todo_id="${todolists.id}" class="todo_btn">→</button>
             </div>
         </c:forEach>
     </section>
 
 </div>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+
