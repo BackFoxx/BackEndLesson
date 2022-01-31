@@ -2,10 +2,9 @@ package dao;
 
 import dto.TodoDto;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +15,7 @@ public class TodoDao {
 
     public List<TodoDto> getTodo() {
         List<TodoDto> list = new ArrayList<>();
+        DateFormat format = new SimpleDateFormat("yyyy.MM.dd");
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -24,7 +24,7 @@ public class TodoDao {
         }
 
         try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
-             PreparedStatement ps = conn.prepareStatement("select id, title, name, sequence, type, regdate from todo"))
+             PreparedStatement ps = conn.prepareStatement("select id, title, name, sequence, type, regdate from todo order by regdate"))
         {
             try (ResultSet rs = ps.executeQuery()) {
 
@@ -35,9 +35,9 @@ public class TodoDao {
 
                     int sequence = rs.getInt("sequence");
                     String type = rs.getString("type");
-                    String regdate = rs.getString("regdate");
-                    TodoDto dto = new TodoDto(id, name, title, sequence, type, regdate);
+                    String regdate = format.format(rs.getDate("regdate"));
 
+                    TodoDto dto = new TodoDto(id, name, title, sequence, type, regdate);
                     list.add(dto);
                 }
 

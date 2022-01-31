@@ -1,6 +1,5 @@
 package servlet;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -18,12 +17,12 @@ import java.io.InputStreamReader;
 @WebServlet(name = "TodoAddServlet", value = "/add")
 public class TodoAddServlet extends HttpServlet {
 
-    TodoDao dao = new TodoDao();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-
+        
+        //0. application/json으로 들어온 데이터를 BufferedReader를 이용해 저장
         String json = null;
         BufferedReader bufferedReader = null;
 
@@ -45,6 +44,7 @@ public class TodoAddServlet extends HttpServlet {
             }
         }
 
+        //1. gson 라이브러리를 이용해 json 데이터를 dto로 저장
         JsonElement element = JsonParser.parseString(json);
         JsonObject object = element.getAsJsonObject();
         String title = object.get("title").getAsString();
@@ -56,6 +56,8 @@ public class TodoAddServlet extends HttpServlet {
         dto.setName(name);
         dto.setSequence(sequence);
 
+        //2. 저장된 dto 객체를 DB에 저장
+        TodoDao dao = new TodoDao();
         dao.addTodo(dto);
     }
 }

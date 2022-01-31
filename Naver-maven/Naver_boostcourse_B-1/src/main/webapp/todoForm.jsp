@@ -16,7 +16,7 @@
 <h1 class="title">할일 등록</h1>
 
 <section id="todoForm" class="form_section">
-    <form id="todoForm_submit" action="/TodoAddServlet" method="post">
+    <form id="todoForm_submit">
         <p class="form_title">어떤 일인가요?</p>
         <input maxlength="24" placeholder="Swift 공부하기(24자까지)" class="form_textInput" type="text" name="title" required>
 

@@ -7,7 +7,7 @@ body {
 
 /* 네비게이션 */
 
-.title {
+.Navigation_title {
     color: #345461;
     font-size: 30px;
     display: inline-block;
@@ -17,7 +17,7 @@ body {
     margin-top: 5%;
 }
 
-.title_todoBtn {
+.Navigation_title_todoBtn {
     background-color: #20adee;
     font-size: 20px;
     text-decoration-line: none;
@@ -60,7 +60,7 @@ body {
     font-size: 20px;
 }
 
-.Section_todo_box {
+.Section_describe_box {
     background-color: #cee5ef;
     position: relative;
 

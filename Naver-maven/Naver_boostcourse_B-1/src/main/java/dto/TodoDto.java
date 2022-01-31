@@ -74,7 +74,7 @@ public class TodoDto{
         return "TodoDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", title='" + title + '\'' +
+                ", navigation_title='" + title + '\'' +
                 ", sequence=" + sequence +
                 ", type='" + type + '\'' +
                 ", regDate='" + regDate + '\'' +
