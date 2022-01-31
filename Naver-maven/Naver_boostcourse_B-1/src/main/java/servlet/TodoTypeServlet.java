@@ -1,6 +1,5 @@
 package servlet;
 
-import com.mysql.cj.xdevapi.JsonParser;
 import dao.TodoDao;
 import dto.TodoDto;
 
@@ -28,12 +27,6 @@ public class TodoTypeServlet extends HttpServlet {
             }
         }
 
-        System.out.println("id = " + id);
-        System.out.println("dto = " + dto);
-
         dao.updateTodo(dto);
-
-        TodoDto one = dao.findOne(id);
-        System.out.println("one = " + one);
     }
 }

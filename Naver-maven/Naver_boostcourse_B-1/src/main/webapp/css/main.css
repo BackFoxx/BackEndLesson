@@ -46,6 +46,7 @@ body {
     margin-left: 10px;
     display: inline-block;
     float: right;
+    margin-bottom: 10%;
 }
 
 .Section_title_box {
@@ -84,4 +85,5 @@ body {
     position: absolute;
     padding: 5px 10px;
     right: 10px;
+    cursor: pointer;
 }

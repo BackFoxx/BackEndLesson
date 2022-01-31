@@ -1,4 +1,4 @@
-var todo_btn = document.querySelectorAll('.todo_btn');
+const todo_btn = document.querySelectorAll('.todo_btn');
 todo_btn.forEach((e) => e.addEventListener('click', todoType));
 
 function todoType(e) {

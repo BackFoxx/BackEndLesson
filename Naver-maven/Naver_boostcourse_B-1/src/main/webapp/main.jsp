@@ -13,11 +13,14 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>Main</title>
 </head>
+
 <body>
+
 <nav class="navigation">
     <h2 class="title">나의 해야할 일들</h2>
     <a href="/todo" class="title_todoBtn">새로운 Todo 등록</a>
 </nav>
+
 <div class="Sections">
 
     <section id="Section_done" class="Section">
@@ -50,7 +53,6 @@
     </section>
 
     <section id="Section_todo" class="Section">
-
         <div class="Section_title_box">TODO</div>
         <c:forEach var="todolists" items="${requestScope.todo}">
                 <c:if test="${todolists.type eq 'TODO'}">
@@ -66,13 +68,12 @@
     </section>
 
 </div>
+
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
     function todoMainUpdate(btn) {
         const Id = btn.getAttribute("todo_id");
         if (btn.closest('.Section').getAttribute('id') === 'Section_todo') {
-
-
             const todoSection = document.getElementById('todolist' + Id);
             document.getElementById("Section_doing").appendChild(todoSection);
         } else if (btn.closest('.Section').getAttribute('id') === 'Section_doing') {
@@ -83,6 +84,7 @@
 
     }
 </script>
+
 </body>
 </html>
 

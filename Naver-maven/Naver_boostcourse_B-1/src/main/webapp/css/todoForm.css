@@ -26,8 +26,9 @@
 
 .form_submitSection > input[type="submit"] {
     margin-top: 40px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     font-size: 20px;
+    border-color: lightgrey;
 }
 
 .form_submitSection_prevBtn {
@@ -38,4 +39,6 @@
 .form_submitSection_submitBtn {
     float: right;
     margin-left: 2%;
+    background-color: #20adee;
+    color: white;
 }

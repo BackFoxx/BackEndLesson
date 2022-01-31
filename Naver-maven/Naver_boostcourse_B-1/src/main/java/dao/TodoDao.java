@@ -108,38 +108,4 @@ public class TodoDao {
         return updateCount;
     }
 
-    public TodoDto findOne(Long todoId) {
-        TodoDto dto = null;
-
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        try (Connection conn = DriverManager.getConnection(dburl, dbUser, dbpasswd);
-             PreparedStatement ps = conn.prepareStatement("select * from todo where id = ?")) {
-
-            ps.setLong(1, todoId);
-
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    long id = rs.getLong("id");
-                    String title = rs.getString("title");
-                    String name = rs.getString("name");
-                    int sequence = rs.getInt("sequence");
-                    String type = rs.getString("type");
-                    String regDate = rs.getString("regdate");
-
-                    dto = new TodoDto(id, name, title, sequence, type, regDate);
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return dto;
-    }
-
 }

@@ -15,28 +15,28 @@
 <body>
 <h1 class="title">할일 등록</h1>
 
-<section class="form_section">
+<section id="todoForm" class="form_section">
     <form id="todoForm_submit" action="/TodoAddServlet" method="post">
         <p class="form_title">어떤 일인가요?</p>
-        <input maxlength="24" placeholder="Swift 공부하기(24자까지)" class="form_textInput" type="text" name="title">
+        <input maxlength="24" placeholder="Swift 공부하기(24자까지)" class="form_textInput" type="text" name="title" required>
 
         <p class="form_title">누가 할 일인가요?</p>
-        <input placeholder="홍길동" class="form_textInput" type="text" name="name">
+        <input placeholder="홍길동" class="form_textInput" type="text" name="name" required>
 
         <p class="form_title">우선순위를 선택하세요</p>
-        <input id="sequence_1" type="radio" name="sequence" value=1>
+        <input class="form_textRadio" id="sequence_1" type="radio" name="sequence" value=1>
         <label class="form_textRadio_label" for="sequence_1">1순위</label>
 
-        <input id="sequence_2" type="radio" name="sequence" value=2>
+        <input class="form_textRadio" id="sequence_2" type="radio" name="sequence" value=2>
         <label class="form_textRadio_label" for="sequence_2">2순위</label>
 
-        <input id="sequence_3" type="radio" name="sequence" value=3>
+        <input class="form_textRadio" id="sequence_3" type="radio" name="sequence" value=3>
         <label class="form_textRadio_label" for="sequence_3">3순위</label>
 
         <section class="form_submitSection">
-            <input class="form_submitSection_prevBtn" type="submit" value="< 이전">
-            <input class="form_submitSection_submitBtn" type="submit" value="제출">
-            <input class="form_submitSection_submitBtn" type="submit" value="내용지우기">
+            <input id="prevBtn" class="form_submitSection_prevBtn" type="submit" value="< 이전">
+            <input id="deleteBtn" class="form_submitSection_submitBtn" type="submit" value="내용지우기">
+            <input id="submitBtn" class="form_submitSection_submitBtn" type="submit" value="제출">
         </section>
     </form>
 
@@ -44,4 +44,5 @@
 
 
 </body>
+<script type="text/javascript" src="js/todoForm.js"></script>
 </html>
