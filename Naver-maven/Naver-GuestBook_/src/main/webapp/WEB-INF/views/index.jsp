@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
- 반갑다
+ <%
+     response.sendRedirect("list");
+ %>
 </body>
 </html>
