@@ -1,6 +1,6 @@
 package repository;
 
-import dto.Category;
+import dto.Promotion;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -12,18 +12,16 @@ import java.util.List;
 import static repository.RepositorySqls.*;
 
 @Repository
-public class CategoryRepositoryImpl implements CategoryRepository {
+public class PromotionRepositoryImpl implements PromotionRepository {
     private NamedParameterJdbcTemplate jdbcTemplate;
-    private RowMapper<Category> categoryRowMapper = BeanPropertyRowMapper.newInstance(Category.class);
+    private RowMapper<Promotion> rowMapper = BeanPropertyRowMapper.newInstance(Promotion.class);
 
-    public CategoryRepositoryImpl(DataSource dataSource) {
+    public PromotionRepositoryImpl(DataSource dataSource) {
         this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
     }
 
-    //카테고리 목록 구하기
     @Override
-    public List<Category> selectAllCategories() {
-        return jdbcTemplate.query(SELECT_ALL_CATEGORIES, categoryRowMapper);
+    public List<Promotion> getPromotionList() {
+        return jdbcTemplate.query(SELECT_ALL_PROMOTIONS, rowMapper);
     }
-
 }
