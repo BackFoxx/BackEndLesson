@@ -1,6 +1,7 @@
 package repository;
 
 import dto.Category;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -16,6 +17,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     private NamedParameterJdbcTemplate jdbcTemplate;
     private RowMapper<Category> categoryRowMapper = BeanPropertyRowMapper.newInstance(Category.class);
 
+    @Autowired
     public CategoryRepositoryImpl(DataSource dataSource) {
         this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
     }

@@ -10,17 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PromotionRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/PromotionRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/ProductRepositoryImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Promotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/DisplayInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/ProductImage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/CategoryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CategoryRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CategoryRepositorySqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Promotion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/CategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/CategoryRepositorySqls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/repository/CategoryRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/repository/CategoryRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PromotionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PromotionRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/CategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/CategoryRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/PromotionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/PromotionRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/DisplayInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/DisplayInfoImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/FileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/ProductImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/CategoryRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/CategoryRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/PromotionRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/PromotionRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +50,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -70,6 +89,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -82,7 +102,7 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PromotionRepositoryTest.프로모션리스트가져오기">
+  <component name="RunManager" selected="JUnit.ProductRepositoryImplTest.상품목록구하기">
     <configuration name="CategoryRepositoryTest.카테고리가져오기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Naver_boostcourse_C-1" />
       <extension name="coverage">
@@ -104,6 +124,22 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DBTest" />
       <option name="METHOD_NAME" value="DB테스트" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductRepositoryImplTest.상품목록구하기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Naver_boostcourse_C-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품목록구하기" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -214,13 +250,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
       <item itemvalue="JUnit.DBTest.DB테스트" />
       <item itemvalue="JUnit.CategoryRepositoryTest.카테고리가져오기" />
       <item itemvalue="JUnit.PromotionRepositoryTest.프로모션리스트가져오기" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품목록구하기" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품목록구하기" />
         <item itemvalue="JUnit.PromotionRepositoryTest.프로모션리스트가져오기" />
         <item itemvalue="JUnit.CategoryRepositoryTest.카테고리가져오기" />
         <item itemvalue="JUnit.DBTest.DB테스트" />
@@ -235,7 +273,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644049804598</updated>
-      <workItem from="1644049806229" duration="17478000" />
+      <workItem from="1644049806229" duration="22715000" />
+      <workItem from="1644146115919" duration="2909000" />
     </task>
     <servers />
   </component>
@@ -252,5 +291,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

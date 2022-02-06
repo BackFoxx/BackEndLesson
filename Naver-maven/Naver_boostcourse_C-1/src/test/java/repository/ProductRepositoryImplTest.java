@@ -1,23 +1,21 @@
 package repository;
 
 import config.ApplicationConfig;
-import dto.Category;
+import dto.Product;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
-public class CategoryRepositoryTest {
+public class ProductRepositoryImplTest {
 
     @Test
-    public void 카테고리목록구하기() {
+    public void 상품목록구하기() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-        CategoryRepository bean = ac.getBean(CategoryRepository.class);
-        List<Category> categories = bean.selectAllCategories();
-        System.out.println(categories);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        List<Product> productsList = repository.getProductsList(2, 0);
+        System.out.println("productsList = " + productsList);
     }
 
 }
