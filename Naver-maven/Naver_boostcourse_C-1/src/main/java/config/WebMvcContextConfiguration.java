@@ -13,7 +13,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = "controller")
 public class WebMvcContextConfiguration implements WebMvcConfigurer {
-    public static final int CACHE_PERIOD = 31556926;
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {

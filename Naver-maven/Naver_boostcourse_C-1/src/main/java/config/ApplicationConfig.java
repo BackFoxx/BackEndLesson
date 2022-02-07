@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan(basePackages = {"repository"})
+@ComponentScan(basePackages = {"repository", "service", "controller"})
 @Import(DataSourceConfig.class)
 public class ApplicationConfig {
 }
