@@ -18,9 +18,9 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public HashMap<String, Object> getProductList(@RequestParam(name = "categoryId", required = false) Integer categoryId, @RequestParam(name = "start", defaultValue = "0") int start) {
+    public HashMap<String, Object> getProductList(@RequestParam("categoryId") Integer categoryId, @RequestParam(name = "start", defaultValue = "0") int start) {
         HashMap<String, Object> map = new HashMap<>();
-        if (categoryId == null) {
+        if (categoryId == 0) {
             map.put("totalCount", productService.totalCount());
             map.put("items", productService.getProductsList(start));
         } else {
