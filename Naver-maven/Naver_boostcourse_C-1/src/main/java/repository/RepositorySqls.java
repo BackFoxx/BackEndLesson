@@ -19,6 +19,6 @@ public class RepositorySqls {
             "inner join file_info fi on pi.file_id = fi.id " +
             "where fi.file_name like '%_th_%' " +
             "limit :start, :limit";
-    public static final String TOTALCOUNT = "select count(*) total_count from category c inner join product p on c.id = p.category_id where c.id=:id group by c.id";
-    public static final String ALLCATEGORIES_TOTALCOUNT = "select count(*) total_count from category c inner join product p on c.id = p.category_id";
+    public static final String TOTALCOUNT = "select count(*) from display_info d inner join product p on d.product_id = p.id inner join category c on p.category_id = c.id where c.id = :id";
+    public static final String ALLCATEGORIES_TOTALCOUNT = "select count(*) from display_info d inner join product p on d.product_id = p.id inner join category c on p.category_id = c.id";
 }
