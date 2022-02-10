@@ -21,9 +21,16 @@ var contentStart = 0; // ProductController -> getProductList의 start 파라미�
 var selectedCategory; // 선택된 카테고리 아이디를 저장할 변수
 
 function selectCategory (e) {
-    const categoryId = e.target.closest('li').getAttribute('data-category'); // 선택된 카테고리 아이디
+    const categoryBtn = e.target.closest('li');
+    const categoryId = categoryBtn.getAttribute('data-category'); // 선택된 카테고리 아이디
     contentStart = 0; // 버튼을 누르면 리스트를 0번부터 다시 보여주도록 설정
     getProductAndCount(categoryId, contentStart)
+
+    for (const li of e.target.closest('ul').children) {
+        li.firstElementChild.className = 'anchor';
+    }
+    e.target.closest('a').className = 'anchor active'; // 활성화된 버튼 css 바꾸기
+
 }
 
 const content =
