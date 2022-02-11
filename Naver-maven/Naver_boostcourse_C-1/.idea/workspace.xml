@@ -11,11 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mainpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mainpage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_promotionSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_promotionSlide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/js/mainpage_promotionSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/js/mainpage_promotionSlide.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,6 +296,10 @@
       <workItem from="1644326039613" duration="11483000" />
       <workItem from="1644413643296" duration="9997000" />
       <workItem from="1644503204702" duration="5153000" />
+      <workItem from="1644585216443" duration="617000" />
+      <workItem from="1644617358322" duration="2000" />
+      <workItem from="1644617915197" duration="162000" />
+      <workItem from="1644619498669" duration="1620000" />
     </task>
     <servers />
   </component>

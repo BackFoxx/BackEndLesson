@@ -33,17 +33,7 @@ function selectCategory (e) {
 
 }
 
-const content =
-    '<li class="item">\n' +
-    '    <a href="detail.html" class="item_book">\n' +
-    '        <div class="item_preview"> <img alt="{productDescription}" class="img_thumb" src="{productImageUrl}"><span class="img_border"></span> </div>\n' +
-    '        <div class="event_txt">\n' +
-    '            <h4 class="event_txt_tit"> <span>{productDescription}</span> <small class="sm">{placeName}</small> </h4>\n' +
-    '            <p class="event_txt_dsc">{productContent}</p>\n' +
-    '        </div>\n' +
-    '    </a>\n' +
-    '</li>'; // 각각의 리스트
-
+const content = document.querySelector('#itemList'); // 각각의 리스트
 
 /*
 * 리스트 가져오기
@@ -85,14 +75,15 @@ function setProductList(items, categoryId) {
     } // 더보기 버튼이 아닌 카테고리 버튼을 눌러서 리스트를 보여주는 경우 원래 진열되어 있던 리스트를 지운 후 실행되도록 설정
 
     for (var i = 0; i < length; ++i) {
-        const resultContent =
-        content.replace('{productDescription}', items[i].product_description)
-            .replace('{productImageUrl}', items[i].product_image_url)
-            .replace('{productDescription}', items[i].product_description)
-            .replace('{placeName}', items[i].place_name)
-            .replace('{productContent}', items[i].product_content)
-
-        boxes[number].innerHTML += resultContent;
+        console.log(items[i]);
+        // const resultContent =
+        // content.replace('{productDescription}', items[i].product_description)
+        //     .replace('{productImageUrl}', items[i].product_image_url)
+        //     .replace('{productDescription}', items[i].product_description)
+        //     .replace('{placeName}', items[i].place_name)
+        //     .replace('{productContent}', items[i].product_content)
+        //
+        // boxes[number].innerHTML += resultContent;
 
         if (number === 0) {
             number = 1;
