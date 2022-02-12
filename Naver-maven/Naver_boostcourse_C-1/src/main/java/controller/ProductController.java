@@ -18,15 +18,11 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public HashMap<String, Object> getProductList(@RequestParam("categoryId") Integer categoryId, @RequestParam(name = "start", defaultValue = "0") int start) {
+    public HashMap<String, Object> getProductList(@RequestParam(name = "categoryId", defaultValue = "0") Integer categoryId, @RequestParam(name = "start", defaultValue = "0") int start) {
         HashMap<String, Object> map = new HashMap<>();
-        if (categoryId == 0) {
-            map.put("totalCount", productService.totalCount());
-            map.put("items", productService.getProductsList(start));
-        } else {
             map.put("totalCount", productService.totalCount(categoryId));
             map.put("items", productService.getProductsList(categoryId, start));
-        }
         return map;
     }
+    //categoryId가 0인 경우 전체 카테고리 리스트를 대상으로 한다.
 }

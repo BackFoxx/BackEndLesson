@@ -19,7 +19,6 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        System.out.println("기본 호출");
         registry.addViewController("/").setViewName("mainpage");
     }
 

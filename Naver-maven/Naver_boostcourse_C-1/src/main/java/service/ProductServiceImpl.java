@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import repository.ProductRepository;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -19,24 +18,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Map<String, Object>> getProductsList(int categoryId, int start) {
+    public List<Product> getProductsList(int categoryId, int start) {
         return repository.getProductsList(categoryId, start);
-    }
-
-    @Override
-    public List<Map<String, Object>> getProductsList(int start) {
-        return repository.getProductsList(start);
     }
 
     @Override
     public int totalCount(int categoryId) {
         return repository.totalCount(categoryId);
     }
-
-    @Override
-    public int totalCount() {
-        return repository.totalCount();
-    }
-
-
 }

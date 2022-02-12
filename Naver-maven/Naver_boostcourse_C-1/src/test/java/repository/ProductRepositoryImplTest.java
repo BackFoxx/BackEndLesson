@@ -16,8 +16,6 @@ public class ProductRepositoryImplTest {
     public void 상품목록구하기() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         ProductRepository repository = ac.getBean(ProductRepository.class);
-        List<Map<String, Object>> productsList = repository.getProductsList(2, 0);
-        System.out.println("productsList = " + productsList);
     }
 
     @Test

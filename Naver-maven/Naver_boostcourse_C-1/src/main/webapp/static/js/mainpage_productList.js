@@ -1,7 +1,7 @@
 const categoryBtn = document.querySelector('.event_tab_lst'); // 카테고리 리스트
 const moreBtn = document.querySelector('.more'); // 더보기 버튼
 
-document.addEventListener('DOMContentLoaded', function (e) { //DomContent 로딩 완료 후 실행
+document.addEventListener('DOMContentLoaded', function () { //DomContent 로딩 완료 후 실행
     getProductAndCount(0, 0); // '전체리스트' 리스트를 가져와 보여줌
 
     categoryBtn.addEventListener('click', function (e) {
@@ -33,7 +33,8 @@ function selectCategory (e) {
 
 }
 
-const content = document.querySelector('#itemList'); // 각각의 리스트
+const content = document.querySelector('#itemList').innerHTML; // 각각의 리스트
+const bindTemplate = Handlebars.compile(content);
 
 /*
 * 리스트 가져오기
@@ -69,21 +70,21 @@ function setProductList(items, categoryId) {
     var number = 0; //lst_event_box 2개를 왔다갔다 하며 리스트가 생성되도록
 
     if (contentStart === 0) {
-        for (var i = 0; i < boxes.length; i++) {
-            boxes[i].innerHTML = '';
-        }
+        boxes.forEach((box) => {
+            box.innerHTML = '';
+        });
     } // 더보기 버튼이 아닌 카테고리 버튼을 눌러서 리스트를 보여주는 경우 원래 진열되어 있던 리스트를 지운 후 실행되도록 설정
 
-    for (var i = 0; i < length; ++i) {
-        console.log(items[i]);
-        // const resultContent =
-        // content.replace('{productDescription}', items[i].product_description)
-        //     .replace('{productImageUrl}', items[i].product_image_url)
-        //     .replace('{productDescription}', items[i].product_description)
-        //     .replace('{placeName}', items[i].place_name)
-        //     .replace('{productContent}', items[i].product_content)
-        //
-        // boxes[number].innerHTML += resultContent;
+    items.forEach((item) => {
+        const obj = {
+            id: item.productId,
+            description: item.productDescription,
+            placeName: item.placeName,
+            content: item.productContent,
+            productImageUrl: item.productImageUrl
+        }
+
+        boxes[number].innerHTML += bindTemplate(obj);
 
         if (number === 0) {
             number = 1;
@@ -91,24 +92,23 @@ function setProductList(items, categoryId) {
         else if (number === 1) {
             number = 0;
         }
-
-    }
+    });
 
     selectedCategory = categoryId;
     contentStart += length; // 더보기 버튼을 눌렀을 때 이미 보여준 리스트의 다음 차례부터 가져오도록 설정
 
-    deleteMoreBtn();
+    validateMoreBtn();
 }
 
 /*
 * 더보기 버튼
 */
 
-function setMoreProductList(e) {
+function setMoreProductList() {
     getProductAndCount(selectedCategory, contentStart);
 } // 더보기 버튼을 눌렀을 때 실행
 
-function deleteMoreBtn() {
+function validateMoreBtn() {
     if (totalCount <= contentStart) {
         moreBtn.style.display = 'none';
     } else {

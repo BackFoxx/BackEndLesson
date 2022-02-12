@@ -113,7 +113,7 @@
 
 
 <script type="rv-template" id="promotionItem">
-    <li class="item" style="background-image: url(http://211.249.62.123/productImages/${productId}/${productImageId});">
+    <li class="item" style="background-image: url({productImageUrl});">
         <a href="#"> <span class="img_btm_border"></span> <span class="img_right_border"></span> <span class="img_bg_gra"></span>
             <div class="event_txt">
                 <h4 class="event_txt_tit"></h4>
@@ -126,14 +126,14 @@
 
 <script type="rv-template" id="itemList">
     <li class="item">
-        <a href="detail.html?id=${id}" class="item_book">
+        <a href="detail.html?id={{id}}" class="item_book">
             <div class="item_preview">
-                <img alt="${description}" class="img_thumb" src="http://211.249.62.123/productImages/${id}?type=th">
+                <img alt="{{description}}" class="img_thumb" src="{{productImageUrl}}">
                 <span class="img_border"></span>
             </div>
             <div class="event_txt">
-                <h4 class="event_txt_tit"> <span>${description}</span> <small class="sm">${placeName}</small> </h4>
-                <p class="event_txt_dsc">${content}</p>
+                <h4 class="event_txt_tit"> <span>{{description}}</span> <small class="sm">{{placeName}}</small> </h4>
+                <p class="event_txt_dsc">{{content}}</p>
             </div>
         </a>
     </li>

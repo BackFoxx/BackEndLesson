@@ -2,6 +2,7 @@ package repository;
 
 import config.ApplicationConfig;
 import dto.Promotion;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,10 +18,8 @@ public class PromotionRepositoryTest {
     public void 프로모션목록구하기() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         PromotionRepository repository = ac.getBean(PromotionRepository.class);
-        List<Map<String, Object>> promotionList = repository.getPromotionList();
-        for (Map<String, Object> map : promotionList) {
-            System.out.println(map);
-        }
+        List<Promotion> promotionList = repository.getPromotionList();
+        Assertions.assertThat(promotionList).isNotNull();
     }
 
 }

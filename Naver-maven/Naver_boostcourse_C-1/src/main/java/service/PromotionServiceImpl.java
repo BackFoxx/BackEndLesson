@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import repository.PromotionRepository;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class PromotionServiceImpl implements PromotionService{
@@ -18,7 +17,7 @@ public class PromotionServiceImpl implements PromotionService{
     }
 
     @Override
-    public List<Map<String, Object>> getPromotionList() {
+    public List<Promotion> getPromotionList() {
         return repository.getPromotionList();
     }
 }

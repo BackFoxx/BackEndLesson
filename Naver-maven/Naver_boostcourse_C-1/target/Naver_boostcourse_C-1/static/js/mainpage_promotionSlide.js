@@ -20,15 +20,13 @@ function getPromotionList() {
 
 function showPromotionImages(items) {
     const imageUl = document.querySelector('.visual_img');
-    const imageLi = '<li class="item">' +
-        '<img src="{product_image_url}">' +
-        '</li>'
+    const content = document.querySelector('#promotionItem').innerHTML;
     const length = items.length;
 
-    for (var i = 0; i < length; i++) {
-        imageUl.innerHTML += imageLi.replace('{product_image_url}', items[i].product_image_url);
-    }
-    imageUl.innerHTML += imageLi.replace('{product_image_url}', items[0].product_image_url)
+    items.forEach((item) => {
+        imageUl.innerHTML += content.replace('{productImageUrl}', item.productImageUrl);
+    });
+    imageUl.innerHTML += content.replace('{productImageUrl}', items[0].productImageUrl)
 
     move(length);
 }

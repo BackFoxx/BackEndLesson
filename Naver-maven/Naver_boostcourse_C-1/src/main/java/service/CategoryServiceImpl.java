@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import repository.CategoryRepository;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -19,7 +18,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<Map<String, Object>> selectAllCategories() {
+    public List<Category> selectAllCategories() {
         return repository.selectAllCategories();
     }
 }
