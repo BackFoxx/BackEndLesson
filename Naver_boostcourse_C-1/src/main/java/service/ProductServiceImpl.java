@@ -24,6 +24,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public int totalCount(int categoryId) {
-        return repository.totalCount(categoryId);
+        return repository.getTotalCount(categoryId);
     }
 }

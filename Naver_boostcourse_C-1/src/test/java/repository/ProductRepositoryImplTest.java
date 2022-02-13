@@ -1,6 +1,7 @@
 package repository;
 
 import config.ApplicationConfig;
+import dto.Comment;
 import dto.Product;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -22,8 +23,26 @@ public class ProductRepositoryImplTest {
     public void 상품개수구하기() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         ProductRepository repository = ac.getBean(ProductRepository.class);
-        int totalCount = repository.totalCount(2);
+        int totalCount = repository.getTotalCount(2);
         Assertions.assertThat(totalCount).isEqualTo(10);
+    }
+
+    @Test
+    public void 평균점수구하기() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        double averageScore = repository.getAverageScore(1);
+        System.out.println("averageScore = " + averageScore);
+    }
+
+    @Test
+    public void 상품전시정보구하기_Comment() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        List<Comment> comment = repository.getComment(1);
+        for (Comment c : comment) {
+            System.out.println(c.toString());
+        }
     }
 
 }
