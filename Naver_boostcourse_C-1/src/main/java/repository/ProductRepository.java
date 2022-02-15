@@ -1,8 +1,6 @@
 package repository;
 
-import dto.Comment;
-import dto.DisplayInfo;
-import dto.Product;
+import dto.*;
 
 import java.util.List;
 
@@ -11,6 +9,9 @@ public interface ProductRepository {
     public int getTotalCount(int categoryId);
 
     public double getAverageScore(int displayInfoId);
-    public List<Comment> getComment(int displayInfoId);
+    public List<Comments> getComments(int displayInfoId);
     public DisplayInfo getDisplayInfo(int displayInfoId);
+    public DisplayInfoImage getDisplayInfoImage(int displayInfoId);
+    public List<ProductImages> getProductImages(int displayInfoId);
+    public List<ProductPrices> getProductPrices(int displayInfoId);
 }

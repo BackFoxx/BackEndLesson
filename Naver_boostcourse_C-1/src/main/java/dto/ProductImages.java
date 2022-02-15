@@ -9,16 +9,18 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-public class DisplayInfoImage {
+public class ProductImages {
     private String contentType;
     private Date createDate;
     private boolean deleteFlag;
 
-    private int displayInfoId;
-    private int displayInfoImageId;
-    private int fileId;
-
+    private int fileInfoId;
     private String fileName;
-    private Date modifyDate;
+    private String modifyDate;
+
+    private int productId;
+    private int productImageId;
     private String saveFileName;
+
+    private Type type;
 }

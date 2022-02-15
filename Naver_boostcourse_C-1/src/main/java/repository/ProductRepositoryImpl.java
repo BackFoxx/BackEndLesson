@@ -1,9 +1,6 @@
 package repository;
 
-import dto.Comment;
-import dto.CommentImage;
-import dto.DisplayInfo;
-import dto.Product;
+import dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
@@ -52,7 +49,7 @@ public class ProductRepositoryImpl implements ProductRepository {
         return jdbcTemplate.queryForObject(AVERAGE_SCORE, params, Double.class);
     }
 
-    private RowMapper<Comment> commentRowMapper = (rs, rowNum) -> {
+    private RowMapper<Comments> commentRowMapper = (rs, rowNum) -> {
 
         CommentImage commentImage = new CommentImage();
         commentImage.setContentType(rs.getString("file_content_type"));
@@ -66,31 +63,31 @@ public class ProductRepositoryImpl implements ProductRepository {
         commentImage.setReservationUserCommentId(rs.getInt("file_reservation_user_comment_id"));
         commentImage.setSaveFileName(rs.getString("file_save_file_name"));
 
-        Comment comment = new Comment();
-        comment.setComment(rs.getString("comment"));
-        comment.setCommentId(rs.getInt("comment_id"));
+        Comments comments = new Comments();
+        comments.setComment(rs.getString("comment"));
+        comments.setCommentId(rs.getInt("comment_id"));
         if (rs.getString("file_file_name") != null) {
-            comment.setCommentImage(commentImage);
+            comments.setCommentImage(commentImage);
         }
 
-        comment.setCreateDate(rs.getDate("create_date"));
-        comment.setModifyDate(rs.getDate("modify_date"));
+        comments.setCreateDate(rs.getDate("create_date"));
+        comments.setModifyDate(rs.getDate("modify_date"));
 
-        comment.setProductId(rs.getInt("product_id"));
+        comments.setProductId(rs.getInt("product_id"));
 
-        comment.setReservationDate(rs.getDate("reservation_date"));
-        comment.setReservationEmail(rs.getString("reservation_email"));
-        comment.setReservationInfoId(rs.getInt("reservation_info_id"));
-        comment.setReservationName(rs.getString("reservation_name"));
-        comment.setReservationTelephone(rs.getString("reservation_telephone"));
+        comments.setReservationDate(rs.getDate("reservation_date"));
+        comments.setReservationEmail(rs.getString("reservation_email"));
+        comments.setReservationInfoId(rs.getInt("reservation_info_id"));
+        comments.setReservationName(rs.getString("reservation_name"));
+        comments.setReservationTelephone(rs.getString("reservation_telephone"));
 
-        comment.setScore(rs.getDouble("score"));
+        comments.setScore(rs.getDouble("score"));
 
-        return comment;
+        return comments;
         };
 
     @Override
-    public List<Comment> getComment(int displayInfoId) {
+    public List<Comments> getComments(int displayInfoId) {
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("displayInfoId", displayInfoId);
         return jdbcTemplate.query(COMMENT, params, commentRowMapper);
@@ -103,5 +100,32 @@ public class ProductRepositoryImpl implements ProductRepository {
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("displayInfoId", displayInfoId);
         return jdbcTemplate.queryForObject(DISPLAY_INFO, params, displayInfoRowMapper);
+    }
+
+    RowMapper<DisplayInfoImage> displayInfoImageRowMapper = BeanPropertyRowMapper.newInstance(DisplayInfoImage.class);
+
+    @Override
+    public DisplayInfoImage getDisplayInfoImage(int displayInfoId) {
+        SqlParameterSource params = new MapSqlParameterSource()
+                .addValue("displayInfoId", displayInfoId);
+        return jdbcTemplate.queryForObject(DISPLAY_INFO_IMAGE, params, displayInfoImageRowMapper);
+    }
+
+    RowMapper<ProductImages> productImagesRowMapper = BeanPropertyRowMapper.newInstance(ProductImages.class);
+
+    @Override
+    public List<ProductImages> getProductImages(int displayInfoId) {
+        SqlParameterSource params = new MapSqlParameterSource()
+                .addValue("displayInfoId", displayInfoId);
+        return jdbcTemplate.query(PRODUCT_IMAGE, params, productImagesRowMapper);
+    }
+
+    RowMapper<ProductPrices> productPricesRowMapper = BeanPropertyRowMapper.newInstance(ProductPrices.class);
+
+    @Override
+    public List<ProductPrices> getProductPrices(int displayInfoId) {
+        SqlParameterSource params = new MapSqlParameterSource()
+                .addValue("displayInfoId", displayInfoId);
+        return jdbcTemplate.query(PRODUCT_PRICE, params, productPricesRowMapper);
     }
 }

@@ -10,15 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ProductImages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ProductPrices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/repository/ProductRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/ProductRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Promotion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" afterDir="false" />
@@ -35,6 +36,7 @@
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -101,23 +103,7 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo">
-    <configuration name="ProductRepositoryImplTest.상품개수구하기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Naver_boostcourse_C-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="상품개수구하기" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProductRepositoryImplTest.상품전시정보구하기_ProductPrices">
     <configuration name="ProductRepositoryImplTest.평균점수구하기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Naver_boostcourse_C-1" />
       <extension name="coverage">
@@ -166,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PromotionRepositoryTest.프로모션목록구하기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductRepositoryImplTest.상품전시정보구하기_DisplayInfoImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Naver_boostcourse_C-1" />
       <extension name="coverage">
         <pattern>
@@ -175,24 +161,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.PromotionRepositoryTest" />
-      <option name="METHOD_NAME" value="프로모션목록구하기" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품전시정보구하기_DisplayInfoImage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceImplTest.CategoryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductRepositoryImplTest.상품전시정보구하기_ProductImages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Naver_boostcourse_C-1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="service.*" />
+          <option name="PATTERN" value="repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.ServiceImplTest" />
-      <option name="METHOD_NAME" value="CategoryServiceTest" />
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품전시정보구하기_ProductImages" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductRepositoryImplTest.상품전시정보구하기_ProductPrices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Naver_boostcourse_C-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품전시정보구하기_ProductPrices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -288,20 +290,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PromotionRepositoryTest.프로모션목록구하기" />
-      <item itemvalue="JUnit.ServiceImplTest.CategoryServiceTest" />
-      <item itemvalue="JUnit.ProductRepositoryImplTest.상품개수구하기" />
       <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
       <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfoImage" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_ProductImages" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_ProductPrices" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_ProductPrices" />
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_ProductImages" />
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfoImage" />
         <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo" />
         <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
-        <item itemvalue="JUnit.ProductRepositoryImplTest.상품개수구하기" />
-        <item itemvalue="JUnit.ServiceImplTest.CategoryServiceTest" />
-        <item itemvalue="JUnit.PromotionRepositoryTest.프로모션목록구하기" />
       </list>
     </recent_temporary>
   </component>
@@ -330,6 +332,7 @@
       <workItem from="1644753971881" duration="3152000" />
       <workItem from="1644763234457" duration="7532000" />
       <workItem from="1644786628615" duration="2147000" />
+      <workItem from="1644889451945" duration="6623000" />
     </task>
     <servers />
   </component>

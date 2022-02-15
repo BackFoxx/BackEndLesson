@@ -7,7 +7,7 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-public class Comment {
+public class Comments {
     private String comment;
     private int commentId;
     private CommentImage commentImage;

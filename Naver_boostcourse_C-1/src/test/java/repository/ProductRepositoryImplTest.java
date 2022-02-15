@@ -1,16 +1,13 @@
 package repository;
 
 import config.ApplicationConfig;
-import dto.Comment;
-import dto.DisplayInfo;
-import dto.Product;
+import dto.*;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
-import java.util.Map;
 
 public class ProductRepositoryImplTest {
 
@@ -40,8 +37,8 @@ public class ProductRepositoryImplTest {
     public void 상품전시정보구하기_Comment() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         ProductRepository repository = ac.getBean(ProductRepository.class);
-        List<Comment> comment = repository.getComment(1);
-        for (Comment c : comment) {
+        List<Comments> comments = repository.getComments(1);
+        for (Comments c : comments) {
             System.out.println(c.toString());
         }
     }
@@ -52,6 +49,35 @@ public class ProductRepositoryImplTest {
         ProductRepository repository = ac.getBean(ProductRepository.class);
         DisplayInfo displayInfo = repository.getDisplayInfo(1);
         System.out.println(displayInfo);
+    }
+
+    @Test
+    public void 상품전시정보구하기_DisplayInfoImage() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        DisplayInfoImage displayInfoImage = repository.getDisplayInfoImage(1);
+        System.out.println(displayInfoImage);
+    }
+
+    @Test
+    public void 상품전시정보구하기_ProductImages() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        List<ProductImages> productImages = repository.getProductImages(1);
+        for (ProductImages p : productImages) {
+            System.out.println(p);
+        }
+    }
+
+    @Test
+    public void 상품전시정보구하기_ProductPrices() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        List<ProductPrices> productPrices = repository.getProductPrices(1);
+        for (ProductPrices p :
+                productPrices) {
+            System.out.println("p = " + p);
+        }
     }
 
 }
