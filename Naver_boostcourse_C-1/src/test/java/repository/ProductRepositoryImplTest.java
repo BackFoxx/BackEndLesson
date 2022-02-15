@@ -2,6 +2,7 @@ package repository;
 
 import config.ApplicationConfig;
 import dto.Comment;
+import dto.DisplayInfo;
 import dto.Product;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -43,6 +44,14 @@ public class ProductRepositoryImplTest {
         for (Comment c : comment) {
             System.out.println(c.toString());
         }
+    }
+
+    @Test
+    public void 상품전시정보구하기_DisplayInfo() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        ProductRepository repository = ac.getBean(ProductRepository.class);
+        DisplayInfo displayInfo = repository.getDisplayInfo(1);
+        System.out.println(displayInfo);
     }
 
 }

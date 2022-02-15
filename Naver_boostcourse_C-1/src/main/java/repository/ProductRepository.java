@@ -1,6 +1,7 @@
 package repository;
 
 import dto.Comment;
+import dto.DisplayInfo;
 import dto.Product;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface ProductRepository {
 
     public double getAverageScore(int displayInfoId);
     public List<Comment> getComment(int displayInfoId);
+    public DisplayInfo getDisplayInfo(int displayInfoId);
 }

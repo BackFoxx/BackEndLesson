@@ -2,6 +2,7 @@ package repository;
 
 import dto.Comment;
 import dto.CommentImage;
+import dto.DisplayInfo;
 import dto.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -93,5 +94,14 @@ public class ProductRepositoryImpl implements ProductRepository {
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("displayInfoId", displayInfoId);
         return jdbcTemplate.query(COMMENT, params, commentRowMapper);
+    }
+
+    RowMapper<DisplayInfo> displayInfoRowMapper = BeanPropertyRowMapper.newInstance(DisplayInfo.class);
+
+    @Override
+    public DisplayInfo getDisplayInfo(int displayInfoId) {
+        SqlParameterSource params = new MapSqlParameterSource()
+                .addValue("displayInfoId", displayInfoId);
+        return jdbcTemplate.queryForObject(DISPLAY_INFO, params, displayInfoRowMapper);
     }
 }

@@ -10,32 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/CommentImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Naver/web/html/4class2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver/web/html/4class2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Naver/web/js/4class2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver/web/js/4class2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Promotion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RepositorySqls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/repository/ProductRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/ProductRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/WebMvcContextConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/WebMvcContextConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/CategoryRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/CategoryRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dto/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/Promotion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/PromotionRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/PromotionRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/RepositorySqls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/repository/ProductRepositoryImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/repository/ProductRepositoryImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,23 +101,7 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment">
-    <configuration name="ProductControllerTest.프로덕트컨트롤러" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Naver_boostcourse_C-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.ProductControllerTest" />
-      <option name="METHOD_NAME" value="프로덕트컨트롤러" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo">
     <configuration name="ProductRepositoryImplTest.상품개수구하기" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Naver_boostcourse_C-1" />
       <extension name="coverage">
@@ -175,6 +145,22 @@
       <option name="PACKAGE_NAME" value="repository" />
       <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="상품전시정보구하기_Comment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Naver_boostcourse_C-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품전시정보구하기_DisplayInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,20 +288,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProductControllerTest.프로덕트컨트롤러" />
       <item itemvalue="JUnit.PromotionRepositoryTest.프로모션목록구하기" />
       <item itemvalue="JUnit.ServiceImplTest.CategoryServiceTest" />
       <item itemvalue="JUnit.ProductRepositoryImplTest.상품개수구하기" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
       <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_DisplayInfo" />
         <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
         <item itemvalue="JUnit.ProductRepositoryImplTest.상품개수구하기" />
         <item itemvalue="JUnit.ServiceImplTest.CategoryServiceTest" />
         <item itemvalue="JUnit.PromotionRepositoryTest.프로모션목록구하기" />
-        <item itemvalue="JUnit.ProductControllerTest.프로덕트컨트롤러" />
       </list>
     </recent_temporary>
   </component>
@@ -343,6 +329,7 @@
       <workItem from="1644700411241" duration="8544000" />
       <workItem from="1644753971881" duration="3152000" />
       <workItem from="1644763234457" duration="7532000" />
+      <workItem from="1644786628615" duration="2147000" />
     </task>
     <servers />
   </component>
