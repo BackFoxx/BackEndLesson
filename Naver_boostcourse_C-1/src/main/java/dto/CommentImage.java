@@ -9,12 +9,12 @@ import java.util.Date;
 @ToString
 public class CommentImage {
     private String contentType;
-    private Date createDate;
+    private String createDate;
     private boolean deleteFlag;
     private int fileId;
     private String fileName;
     private int imageId;
-    private Date modifyDate;
+    private String modifyDate;
     private int reservationInfoId;
     private int reservationUserCommentId;
     private String saveFileName;

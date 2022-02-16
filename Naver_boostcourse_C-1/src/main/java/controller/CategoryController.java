@@ -18,9 +18,7 @@ public class CategoryController {
     }
 
     @GetMapping("/categories")
-    public HashMap<String, Object> getAllCategories() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("items", categoryService.selectAllCategories());
-        return map;
+    public HashMap<String, Object> getCategories() {
+        return categoryService.getCategories();
     }
 }

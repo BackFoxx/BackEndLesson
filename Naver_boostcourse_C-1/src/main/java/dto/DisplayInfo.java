@@ -12,12 +12,12 @@ import java.util.Date;
 public class DisplayInfo {
     private int categoryId;
     private String categoryName;
-    private Date createDate;
+    private String createDate;
 
     private int displayInfoId;
     private String email;
     private String homepage;
-    private Date modifyDate;
+    private String modifyDate;
     private String openingHours;
 
     private String placeLot;

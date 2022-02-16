@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 public class ProductImages {
     private String contentType;
-    private Date createDate;
+    private String createDate;
     private boolean deleteFlag;
 
     private int fileInfoId;

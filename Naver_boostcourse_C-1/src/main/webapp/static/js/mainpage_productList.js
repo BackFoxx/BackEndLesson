@@ -55,7 +55,7 @@ function getProductAndCount(categoryId, start) {
         }
     };
 
-    http.open("GET", "/api/products?categoryId=" + categoryId + "&start=" + start);
+    http.open("GET", `/api/products?categoryId=${categoryId}&start=${start}`);
     http.send()
 }
 
@@ -77,11 +77,11 @@ function setProductList(items, categoryId) {
 
     items.forEach((item) => {
         const obj = {
-            id: item.productId,
             description: item.productDescription,
             placeName: item.placeName,
             content: item.productContent,
-            productImageUrl: item.productImageUrl
+            productImageUrl: item.productImageUrl,
+            displayInfoId: item.displayInfoId
         }
 
         boxes[number].innerHTML += bindTemplate(obj);

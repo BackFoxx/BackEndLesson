@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class ServiceImplTest {
     public void CategoryServiceTest() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         CategoryService service = ac.getBean(CategoryService.class);
-        List<Category> categories = service.selectAllCategories();
+        HashMap<String, Object> categories = service.getCategories();
         Assertions.assertThat(categories).isNotNull();
     }
 
@@ -27,11 +28,8 @@ public class ServiceImplTest {
     public void ProductServiceTest() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         ProductService service = ac.getBean(ProductService.class);
-        List<Product> productsList = service.getProductsList(3, 0);
-        for (Product product :
-                productsList) {
-            System.out.println("product = " + product.toString());
-        }
+        HashMap<String, Object> products = service.getProducts(0, 3);
+        System.out.println("products = " + products);
     }
 
     @Test

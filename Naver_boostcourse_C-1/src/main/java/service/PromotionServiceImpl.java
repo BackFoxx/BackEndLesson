@@ -3,8 +3,10 @@ package service;
 import dto.Promotion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import repository.PromotionRepository;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -17,7 +19,10 @@ public class PromotionServiceImpl implements PromotionService{
     }
 
     @Override
-    public List<Promotion> getPromotionList() {
-        return repository.getPromotionList();
+    @Transactional
+    public HashMap<String, Object> getPromotions() {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("items", repository.getPromotionList());
+        return map;
     }
 }

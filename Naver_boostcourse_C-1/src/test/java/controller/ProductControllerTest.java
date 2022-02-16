@@ -14,6 +14,7 @@ public class ProductControllerTest {
     public void 프로덕트컨트롤러() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         ProductController controller = ac.getBean(ProductController.class);
-        controller.getProductList(0, 0);
+        HashMap<String, Object> displayInfo = controller.getDisplayInfo(1);
+        System.out.println("displayInfo = " + displayInfo);
     }
 }

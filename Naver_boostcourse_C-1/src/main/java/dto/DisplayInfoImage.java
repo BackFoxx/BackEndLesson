@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 public class DisplayInfoImage {
     private String contentType;
-    private Date createDate;
+    private String createDate;
     private boolean deleteFlag;
 
     private int displayInfoId;
@@ -19,6 +19,6 @@ public class DisplayInfoImage {
     private int fileId;
 
     private String fileName;
-    private Date modifyDate;
+    private String modifyDate;
     private String saveFileName;
 }

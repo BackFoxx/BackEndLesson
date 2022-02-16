@@ -12,12 +12,12 @@ public class Comments {
     private int commentId;
     private CommentImage commentImage;
 
-    private Date createDate;
-    private Date modifyDate;
+    private String createDate;
+    private String modifyDate;
 
     private int productId;
 
-    private Date reservationDate;
+    private String reservationDate;
     private String reservationEmail;
     private int reservationInfoId;
     private String reservationName;

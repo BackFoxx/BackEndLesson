@@ -19,8 +19,6 @@ public class PromotionContoller {
 
     @GetMapping("/promotions")
     public HashMap<String, Object> getPromotionList() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("items", promotionService.getPromotionList());
-        return map;
+        return promotionService.getPromotions();
     }
 }

@@ -1,11 +1,11 @@
 package service;
 
-import dto.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import repository.CategoryRepository;
 
-import java.util.List;
+import java.util.HashMap;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -18,7 +18,10 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<Category> selectAllCategories() {
-        return repository.selectAllCategories();
+    @Transactional
+    public HashMap<String, Object> getCategories() {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("items", repository.selectAllCategories());
+        return map;
     }
 }

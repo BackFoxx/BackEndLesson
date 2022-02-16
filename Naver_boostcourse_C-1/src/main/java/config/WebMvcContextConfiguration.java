@@ -12,16 +12,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebMvcContextConfiguration implements WebMvcConfigurer {
     public final int CACHE_PERIOD = 31556926;
 
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/css/**").addResourceLocations("/css/").setCachePeriod(CACHE_PERIOD);
-//    }
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("mainpage");
-    }
-
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
@@ -30,8 +20,8 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
+        resolver.setPrefix("/static/htmls/");
+        resolver.setSuffix(".html");
         return resolver;
     }
 }

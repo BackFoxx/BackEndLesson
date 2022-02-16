@@ -53,12 +53,12 @@ public class ProductRepositoryImpl implements ProductRepository {
 
         CommentImage commentImage = new CommentImage();
         commentImage.setContentType(rs.getString("file_content_type"));
-        commentImage.setCreateDate(rs.getDate("file_create_date"));
+        commentImage.setCreateDate(rs.getString("file_create_date"));
         commentImage.setDeleteFlag(rs.getBoolean("file_delete_flag"));
         commentImage.setFileId(rs.getInt("file_file_id"));
         commentImage.setFileName(rs.getString("file_file_name"));
         commentImage.setImageId(rs.getInt("file_image_id"));
-        commentImage.setModifyDate(rs.getDate("file_modify_date"));
+        commentImage.setModifyDate(rs.getString("file_modify_date"));
         commentImage.setReservationInfoId(rs.getInt("file_reservation_info_id"));
         commentImage.setReservationUserCommentId(rs.getInt("file_reservation_user_comment_id"));
         commentImage.setSaveFileName(rs.getString("file_save_file_name"));
@@ -70,12 +70,12 @@ public class ProductRepositoryImpl implements ProductRepository {
             comments.setCommentImage(commentImage);
         }
 
-        comments.setCreateDate(rs.getDate("create_date"));
-        comments.setModifyDate(rs.getDate("modify_date"));
+        comments.setCreateDate(rs.getString("create_date"));
+        comments.setModifyDate(rs.getString("modify_date"));
 
         comments.setProductId(rs.getInt("product_id"));
 
-        comments.setReservationDate(rs.getDate("reservation_date"));
+        comments.setReservationDate(rs.getString("reservation_date"));
         comments.setReservationEmail(rs.getString("reservation_email"));
         comments.setReservationInfoId(rs.getInt("reservation_info_id"));
         comments.setReservationName(rs.getString("reservation_name"));
