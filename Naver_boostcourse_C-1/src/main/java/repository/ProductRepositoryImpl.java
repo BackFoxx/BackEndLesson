@@ -46,7 +46,9 @@ public class ProductRepositoryImpl implements ProductRepository {
     public double getAverageScore(int displayInfoId) {
         SqlParameterSource params = new MapSqlParameterSource()
                 .addValue("displayInfoId", displayInfoId);
-        return jdbcTemplate.queryForObject(AVERAGE_SCORE, params, Double.class);
+        Double queryResult = jdbcTemplate.queryForObject(AVERAGE_SCORE, params, Double.class);
+        if (queryResult == null) queryResult = 0.0;
+        return queryResult;
     }
 
     private RowMapper<Comments> commentRowMapper = (rs, rowNum) -> {

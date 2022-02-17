@@ -16,12 +16,23 @@ public class ProductController {
 
     @GetMapping("/products")
     public HashMap<String, Object> getProductList(@RequestParam(name = "categoryId", defaultValue = "0") Integer categoryId, @RequestParam(name = "start", defaultValue = "0") int start) {
-        return productService.getProducts(categoryId, start);
+        try {
+            return productService.getProducts(categoryId, start);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
+
     //categoryId가 0인 경우 전체 카테고리 리스트를 대상으로 한다.
 
     @GetMapping("/products/{displayInfoId}")
     public HashMap<String, Object> getDisplayInfo(@PathVariable(name = "displayInfoId") int displayInfoId) {
-        return productService.getDisplayInfo(displayInfoId);
+        try {
+            return productService.getDisplayInfo(displayInfoId);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

@@ -45,40 +45,7 @@
                     <div class="group_visual">
                         <div>
                             <div class="container_visual" style="width: 414px;">
-                                <ul class="visual_img detail_swipe">
-                                    <li class="item" style="width: 414px;"> <img alt="" class="img_thumb" src=""> <span class="img_bg"></span>
-                                        <div class="visual_txt">
-                                            <div class="visual_txt_inn">
-                                                <h2 class="visual_txt_tit"> <span></span> </h2>
-                                                <p class="visual_txt_dsc"></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item" style="width: 414px;"> <img alt="" class="img_thumb" src=""> <span class="img_bg"></span>
-                                        <div class="visual_txt">
-                                            <div class="visual_txt_inn">
-                                                <h2 class="visual_txt_tit"> <span></span> </h2>
-                                                <p class="visual_txt_dsc"></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item" style="width: 414px;"> <img alt="" class="img_thumb" src=""> <span class="img_bg"></span>
-                                        <div class="visual_txt">
-                                            <div class="visual_txt_inn">
-                                                <h2 class="visual_txt_tit"> <span></span> </h2>
-                                                <p class="visual_txt_dsc"></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item" style="width: 414px;"> <img alt="" class="img_thumb" src=""> <span class="img_bg"></span>
-                                        <div class="visual_txt">
-                                            <div class="visual_txt_inn">
-                                                <h2 class="visual_txt_tit"> <span></span> </h2>
-                                                <p class="visual_txt_dsc"></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <ul class="visual_img detail_swipe"></ul>
                             </div>
                             <div class="prev">
                                 <div class="prev_inn">
@@ -260,7 +227,22 @@
     </footer>
     <div id="photoviwer"></div>
 
-    <script type="text/javascript" src="../js/detail.js"></script>
+    <script id="ProductImageTemplate" type="ProductImage">
+        {{#each productImages}}
+            {{#ifImageType type}}
+                <li class="item" style="width: 414px;"> <img alt="" class="img_thumb" src="../../{{../saveFileName}}"> <span class="img_bg"></span>
+                    <div class="visual_txt">
+                        <div class="visual_txt_inn">
+                            <h2 class="visual_txt_tit"><span>{{../../displayInfo.productDescription}}</span></h2>
+                            <p class="visual_txt_dsc"></p>
+                        </div>
+                    </div>
+                </li>
+            {{/ifImageType}}
+        {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script type="text/javascript" src="../js/detail_productImage.js"></script>
 </body>
 
 

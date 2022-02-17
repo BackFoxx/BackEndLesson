@@ -10,69 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/WebMvcContextConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/WebMvcContextConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PromotionContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PromotionContoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/CommentImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/CommentImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/DisplayInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/DisplayInfoImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/ProductImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/ProductImages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/ProductPrices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/ProductPrices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PromotionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PromotionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PromotionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PromotionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mainpage.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/ProductControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/ServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/config/WebMvcContextConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/config/WebMvcContextConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/PromotionContoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/controller/PromotionContoller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/dto/Promotion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/CategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/CategoryRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/CategoryRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/PromotionRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/PromotionRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/RepositorySqls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/RepositorySqls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/PromotionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/PromotionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/PromotionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/service/PromotionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/jsp/mainpage.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/js/mainpage_productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/js/mainpage_productList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/WebMvcContextConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/WebMvcContextConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PromotionContoller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PromotionContoller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PromotionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PromotionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PromotionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PromotionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controller/ProductControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/ServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/ServiceImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +85,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -407,7 +356,9 @@
       <workItem from="1644786628615" duration="2147000" />
       <workItem from="1644889451945" duration="15782000" />
       <workItem from="1645004378975" duration="4155000" />
-      <workItem from="1645023580911" duration="1165000" />
+      <workItem from="1645023580911" duration="4828000" />
+      <workItem from="1645036904770" duration="9392000" />
+      <workItem from="1645053344516" duration="2697000" />
     </task>
     <servers />
   </component>
