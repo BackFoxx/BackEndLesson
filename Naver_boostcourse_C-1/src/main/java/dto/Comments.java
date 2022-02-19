@@ -3,6 +3,7 @@ package dto;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -10,7 +11,7 @@ import java.util.Date;
 public class Comments {
     private String comment;
     private int commentId;
-    private CommentImage commentImage;
+    private List<CommentImage> commentImage;
 
     private String createDate;
     private String modifyDate;

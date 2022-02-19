@@ -10,15 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productDescription.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_review.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/review.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/reviewAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/WEB-INF/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repository/ProductRepositoryImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,10 +105,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.75">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Naver_boostcourse_C-1/src/main/webapp/static/htmls/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
+    <configuration name="ProductRepositoryImplTest.상품전시정보구하기_Comment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Naver_boostcourse_C-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.ProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="상품전시정보구하기_Comment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="mainpage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Naver_boostcourse_C-1/src/main/webapp/static/htmls/mainpage.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Naver_boostcourse_C-1/src/main/webapp/static/htmls/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="reserve.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Naver_boostcourse_C-1/src/main/webapp/static/htmls/reserve.html" useBuiltInWebServerPort="true">
@@ -207,20 +223,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.mainpage.html" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
-      <item itemvalue="JavaScript Debug.review.html" />
       <item itemvalue="JavaScript Debug.reviewWrite.html" />
       <item itemvalue="JavaScript Debug.reserve.html" />
       <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.review.html" />
+      <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.75" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductRepositoryImplTest.상품전시정보구하기_Comment" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.reserve.html" />
         <item itemvalue="JavaScript Debug.reviewWrite.html" />
         <item itemvalue="JavaScript Debug.review.html" />
-        <item itemvalue="JavaScript Debug.mainpage.html" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +271,9 @@
       <workItem from="1645036904770" duration="9392000" />
       <workItem from="1645053344516" duration="2697000" />
       <workItem from="1645123274435" duration="11814000" />
-      <workItem from="1645195316471" duration="1699000" />
+      <workItem from="1645195316471" duration="10622000" />
+      <workItem from="1645223288880" duration="7014000" />
+      <workItem from="1645300191274" duration="338000" />
     </task>
     <servers />
   </component>

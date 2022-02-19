@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const AJAX = {
+    displayInfoId: new URL(document.URL).searchParams.get("id"),
     displayInfoAjax: null
 }
 
 function getDisplayInfoAjax() {
     const http = new XMLHttpRequest();
-    const displayInfoId = new URL(document.URL).searchParams.get("id");
 
     http.responseType = 'json';
     http.onreadystatechange = function () {
@@ -17,9 +17,10 @@ function getDisplayInfoAjax() {
 
             GetAjaxToProductImageJs();
             GetAjaxToProductDescriptionJs();
+            GetAjaxToShortReviewJs();
         }
     };
 
-    http.open('GET', `/api/products/${displayInfoId}`);
+    http.open('GET', `/api/products/${AJAX.displayInfoId}`);
     http.send();
 };

@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 
 import static repository.RepositorySqls.*;
@@ -69,7 +70,9 @@ public class ProductRepositoryImpl implements ProductRepository {
         comments.setComment(rs.getString("comment"));
         comments.setCommentId(rs.getInt("comment_id"));
         if (rs.getString("file_file_name") != null) {
-            comments.setCommentImage(commentImage);
+            List<CommentImage> commentImageList = new ArrayList<>();
+            commentImageList.add(commentImage);
+            comments.setCommentImage(commentImageList);
         }
 
         comments.setCreateDate(rs.getString("create_date"));
