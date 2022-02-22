@@ -10,13 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_shortReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_shortReview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productDescription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/review.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +271,7 @@
       <workItem from="1645223288880" duration="7014000" />
       <workItem from="1645300191274" duration="2937000" />
       <workItem from="1645303338436" duration="4029000" />
+      <workItem from="1645399666601" duration="8987000" />
     </task>
     <servers />
   </component>

@@ -31,6 +31,10 @@ function selectCategory (e) {
     }
     e.target.closest('a').className = 'anchor active'; // 활성화된 버튼 css 바꾸기
 
+    // const selectedBtn = e.target.closest('li');
+    // selectedBtn.firstElementChild.classList.add('active');
+    // Array.from(PRODUCT_CONTENT.detailBtns.children).filter(btn => btn !== selectedBtn)
+    //     .forEach(btn => btn.firstElementChild.classList.remove('active'));
 }
 
 const content = document.querySelector('#itemList').innerHTML; // 각각의 리스트

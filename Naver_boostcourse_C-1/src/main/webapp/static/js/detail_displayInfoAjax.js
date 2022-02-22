@@ -18,6 +18,7 @@ function getDisplayInfoAjax() {
             GetAjaxToProductImageJs();
             GetAjaxToProductDescriptionJs();
             GetAjaxToShortReviewJs();
+            GetAjaxToProductContentJs();
         }
     };
 
