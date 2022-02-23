@@ -10,14 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95000f6-73d0-4410-9d58-dfe510581c07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/src/main/java/guestbook/controller/GuestBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/src/main/java/guestbook/controller/GuestBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/Naver-GuestBook/WEB-INF/classes/guestbook/controller/GuestBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/Naver-GuestBook/WEB-INF/classes/guestbook/controller/GuestBookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/Naver-GuestBook/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/Naver-GuestBook/WEB-INF/views/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/classes/guestbook/controller/GuestBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver-maven/Naver-GuestBook_/target/classes/guestbook/controller/GuestBookController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/htmls/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_displayInfoAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productDescription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/detail_productImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/mainpage_productList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Naver_boostcourse_C-1/static/htmls/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,6 +272,8 @@
       <workItem from="1645300191274" duration="2937000" />
       <workItem from="1645303338436" duration="4029000" />
       <workItem from="1645399666601" duration="8987000" />
+      <workItem from="1645496335599" duration="709000" />
+      <workItem from="1645575167999" duration="177000" />
     </task>
     <servers />
   </component>
