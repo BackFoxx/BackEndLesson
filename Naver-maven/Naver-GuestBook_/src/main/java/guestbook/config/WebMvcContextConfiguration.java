@@ -1,10 +1,15 @@
 package guestbook.config;
 
+import guestbook.argumentresolver.HandlerMapArgumentResolver;
+import guestbook.interceptor.LogInterCeptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import java.util.List;
 
 @Configuration
 @EnableWebMvc
@@ -17,6 +22,17 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
         registry.addResourceHandler("/css/**").addResourceLocations("/css/").setCachePeriod(CACHE_PERIOD);
         registry.addResourceHandler("/img/**").addResourceLocations("/img/").setCachePeriod(CACHE_PERIOD);
         registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(CACHE_PERIOD);
+    }
+
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+        System.out.println("아규먼트 리졸버 등록");
+        resolvers.add(new HandlerMapArgumentResolver());
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LogInterCeptor());
     }
 
     @Override

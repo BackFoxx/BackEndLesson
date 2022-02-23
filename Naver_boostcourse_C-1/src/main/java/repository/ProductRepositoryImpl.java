@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
@@ -15,7 +16,7 @@ import java.util.List;
 
 import static repository.RepositorySqls.*;
 
-@Service
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
     NamedParameterJdbcTemplate jdbcTemplate;
 
