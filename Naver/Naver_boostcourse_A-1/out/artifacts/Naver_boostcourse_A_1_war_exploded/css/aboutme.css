@@ -1,0 +1,21 @@
+.content_Aboutme {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content_Aboutme_sec {
+  margin-bottom: 50px;
+}
+
+.content_Aboutme_sec > h2 {
+  margin: 0px;
+}
+
+.content_Aboutme_sec > p {
+  margin: 0px;
+}
+
+.content_Aboutme_sec > a {
+  text-decoration-line: none;
+  color: #ffbd6c;
+}

@@ -1,0 +1,89 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    position: relative;
+}
+
+/* 네비게이션 */
+
+.Navigation_title {
+    color: #345461;
+    font-size: 30px;
+    display: inline-block;
+
+    transform: rotate(-30deg);
+    float: left;
+    margin-top: 5%;
+}
+
+.Navigation_title_todoBtn {
+    background-color: #20adee;
+    font-size: 20px;
+    text-decoration-line: none;
+    color: white;
+
+    border: lightgrey;
+    padding: 10px 30px 10px 30px;
+    margin-top: 5%;
+
+    position: relative;
+
+    float: right;
+    z-index: 10;
+}
+
+/* 섹션 */
+
+.Sections {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+}
+
+.Section {
+    width: 30%;
+    margin-left: 10px;
+    display: inline-block;
+    float: right;
+    margin-bottom: 10%;
+}
+
+.Section_title_box {
+    background-color: #345461;
+    color: white;
+
+    margin-top: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.Section_describe_box {
+    background-color: #cee5ef;
+    position: relative;
+
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.todo_title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.todo_desc {
+    font-size: 15px;
+}
+
+.todo_btn {
+    position: absolute;
+    padding: 5px 10px;
+    right: 10px;
+    cursor: pointer;
+}
