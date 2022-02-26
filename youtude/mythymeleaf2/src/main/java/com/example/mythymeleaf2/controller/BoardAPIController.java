@@ -4,6 +4,7 @@ import com.example.mythymeleaf2.model.Board;
 import com.example.mythymeleaf2.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.util.StringUtils;
 
 import java.util.List;
 
@@ -19,8 +20,13 @@ public class BoardAPIController {
     }
 
     @GetMapping("/boards")
-    public List<Board> all() {
-        return repository.findAll();
+    public List<Board> all(@RequestParam(required = false, defaultValue = "") String title,
+                           @RequestParam(required = false, defaultValue = "") String content) {
+        if (StringUtils.isEmpty(title) && StringUtils.isEmpty(content)) {
+            return repository.findAll();
+        } else {
+            return repository.findByTitleOrContent(title, content);
+        }
     }
 
     @PostMapping("/boards")
