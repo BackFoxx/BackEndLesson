@@ -3,6 +3,7 @@ package com.example.mythymeleaf2.controller;
 import com.example.mythymeleaf2.model.Board;
 import com.example.mythymeleaf2.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.util.StringUtils;
 
@@ -53,6 +54,7 @@ public class BoardAPIController {
                 });
     }
 
+    @Secured("ROLE_ADMIN")
     @DeleteMapping("/boards/{id}")
     public void deleteBoard(@PathVariable Long id) {
         repository.deleteById(id);

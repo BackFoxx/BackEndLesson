@@ -1,5 +1,6 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="fragments/common :: head('게시판')">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -35,13 +36,27 @@
             </div>
         </div>
         <div class="text-end">
-            <a type="button" class="btn btn-primary" th:href="@{/board/list}">취소</a>
+            <a class="btn btn-primary" th:href="@{/board/list}">취소</a>
+            <button type="button" sec:authorize="hasRole('ROLE_ADMIN')" class="btn btn-primary" th:onclick="|deleteBoard(*{id})|">삭제</button>
             <button type="submit" class="btn btn-primary">확인</button>
         </div>
     </form>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    function deleteBoard(id) {
+        $.ajax({
+            url: `/api/boards/${id}`,
+            method: "DELETE",
+            success: function (result) {
+                alert('삭제되었습니다');
+                window.location.href = '/board/list';
+            }
+        })
+    }
+</script>
 </body>
+
+<footer th:replace="fragments/common :: footer"/>
 </html>
