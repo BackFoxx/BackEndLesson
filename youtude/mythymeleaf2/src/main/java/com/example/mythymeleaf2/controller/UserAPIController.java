@@ -3,34 +3,38 @@ package com.example.mythymeleaf2.controller;
 import com.example.mythymeleaf2.model.Board;
 import com.example.mythymeleaf2.model.QUser;
 import com.example.mythymeleaf2.model.User;
+import com.example.mythymeleaf2.repository.CustomizedUserRepository;
+import com.example.mythymeleaf2.repository.CustomizedUserRepositoryImpl;
 import com.example.mythymeleaf2.repository.UserRepository;
+import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.dsl.BooleanExpression;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 @Slf4j
 public class UserAPIController {
 
     private final UserRepository userRepository;
-
-    @Autowired
-    public UserAPIController(UserRepository repository) {
-        this.userRepository = repository;
-    }
+    private final CustomizedUserRepository customizedUserRepository;
 
     @GetMapping("/users")
-    public List<User> all(@RequestParam(required = false) String method, @RequestParam(required = false) String text) {
+    public Iterable<User> all(@RequestParam(required = false) String method, @RequestParam(required = false) String text) {
         List<User> users = null;
         if ("query".equals(method)) {
             users = userRepository.findByUsernameQuery(text);
         } else if ("querydsl".equals(method)) {
             QUser user = QUser.user;
-
+            Predicate query = user.username.contains(text);
+            return userRepository.findAll(query);
+        } else if ("querydslcustom".equals(method)) {
+            users = customizedUserRepository.findByCustomUsername(text);
         } else  {
             users = userRepository.findAll();
         }

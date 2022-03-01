@@ -17,6 +17,4 @@ public interface UserRepository extends JpaRepository<User, Long>, QuerydslPredi
 
     @Query("select u from User u where u.username like %?1%")
     List<User> findByUsernameQuery(String username);
-
-    List<User> findByUsernameQueryDsl(String username);
 }
