@@ -21,7 +21,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none #create update none
+      ddl-auto: update #create update none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
@@ -31,15 +31,15 @@ spring:
       client:
         registration:
           google: # /oauth2/authorization/google 이 주소를 동작하게 한다.
-            client-id: 머시기
-            client-secret: 머시기
+            client-id: 530135348646-ph0at75amscsuu50pq9v6t70om3sbofi.apps.googleusercontent.com
+            client-secret: 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
             scope:
               - email
               - profile
 
           facebook:
-            client-id: 머시기
-            client-secret: 머시기
+            client-id: 475185444097700
+            client-secret: e86c4e78476de707f3b40590cdf8f604
             scope:
               - email
               - public_profile
@@ -47,12 +47,11 @@ spring:
           # 네이버는 OAuth2.0 공식 지원대상이 아니라서 provider 설정이 필요하다.
           # 요청주소도 다르고, 응답 데이터도 다르기 때문이다.
           naver:
-            client-id: 머시기
-            client-secret: 머시기
+            client-id: 10GvIj3AgptuHvocSVuq
+            client-secret: ntpIZMQyGf
             scope:
               - name
               - email
-              - profile_image
             client-name: Naver # 클라이언트 네임은 구글 페이스북도 대문자로 시작하더라.
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8080/login/oauth2/code/naver
