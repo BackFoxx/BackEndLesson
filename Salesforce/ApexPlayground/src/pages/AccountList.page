@@ -2,5 +2,10 @@
  - Created by PC on 2022-03-05.
  -->
 
-<apex:page id="AccountList">
+<apex:page standardController="Account" recordSetVar="accounts">
+    <apex:repeat value="{!accounts}" var="a">
+        <li>
+            <apex:outputLink value="/{!a.id}">{! a.Name }</apex:outputLink>
+        </li>
+    </apex:repeat>
 </apex:page>

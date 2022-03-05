@@ -2,5 +2,10 @@
  - Created by PC on 2022-03-05.
  -->
 
-<apex:page id="NewCaseList">
+<apex:page id="NewCaseList" controller="NewCaseListController">
+    <apex:repeat value="{! newCases}" var="case">
+        <li>
+        <apex:outputLink value="/{! case.Id}">{! case}</apex:outputLink>
+        </li>
+    </apex:repeat>
 </apex:page>

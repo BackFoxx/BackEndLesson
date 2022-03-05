@@ -3,4 +3,5 @@
  -->
 
 <aura:component description="meetGreet">
+    <p>Hi</p>
 </aura:component>
