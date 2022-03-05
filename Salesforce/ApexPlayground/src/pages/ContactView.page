@@ -1,0 +1,9 @@
+<!--
+ - Created by PC on 2022-03-05.
+ -->
+
+<apex:page standardController="Contact">
+    {! Contact.FirstName}
+    {! Contact.LastName}
+    {! Contact.Owner.Email}
+</apex:page>

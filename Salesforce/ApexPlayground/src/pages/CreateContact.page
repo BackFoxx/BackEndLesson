@@ -1,0 +1,18 @@
+<!--
+ - Created by PC on 2022-03-05.
+ -->
+
+<apex:page standardController="Contact" id="CreateContact">
+    <apex:form>
+        <apex:pageBlock title="insertForm">
+            <apex:pageBlockSection title="section" columns="1">
+                <apex:inputField value="{! Contact.FirstName}"/>
+                <apex:inputField value="{! Contact.LastName}"/>
+                <apex:inputField value="{! Contact.Email}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons>
+                <apex:commandButton action="{! save}" value="save"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
