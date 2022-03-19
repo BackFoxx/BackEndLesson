@@ -1,10 +1,10 @@
-package com.example.springfrog;
+package com.example.springfrogbook;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringFrogApplicationTests {
+class SpringFrogBookApplicationTests {
 
     @Test
     void contextLoads() {
