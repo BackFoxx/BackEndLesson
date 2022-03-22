@@ -19,6 +19,7 @@ public class Chap_1_1 {
 //            System.out.println("a = " + a + ", b = " + b +", b = " + c);
 //            System.out.println("middle = " + middle(a, b, c));
 //        }
+        Q13();
     }
 
     static int max4(int a, int b, int c, int d) {
@@ -121,5 +122,49 @@ public class Chap_1_1 {
         }
 
         System.out.println("그 수는 " + result + "자리입니다.");
+    }
+
+    static void Q12() {
+        System.out.println("  | 1  2  3  4  5  6  7  8  9");
+        System.out.println("--+--------------------------");
+        for (int i = 1; i <= 9; i++) {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(i + " |");
+            for (int j = 1; j <= 9; j++) {
+                stringBuilder.append(" " + i * j);
+                if (i * j < 10) {
+                    stringBuilder.append(" ");
+                }
+            }
+            System.out.println(stringBuilder.toString());
+        }
+    }
+
+    static void Q13() {
+        System.out.println("  | 1  2  3  4  5  6  7  8  9");
+        System.out.println("--+--------------------------");
+        for (int i = 1; i <= 9; i++) {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(i + " |");
+            for (int j = 1; j <= 9; j++) {
+                int sum = i + j;
+                stringBuilder.append(" " + sum);
+                if (sum < 10) {
+                    stringBuilder.append(" ");
+                }
+            }
+            System.out.println(stringBuilder.toString());
+        }
+    }
+
+    static void Q14() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        System.out.println("사각형을 출력합니다.");
+        System.out.println("단 수: ");
+        for (int i = 0; i < scanner.nextInt(); i++) {
+
+        }
     }
 }
