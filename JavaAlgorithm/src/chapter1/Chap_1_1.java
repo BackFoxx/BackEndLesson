@@ -19,7 +19,8 @@ public class Chap_1_1 {
 //            System.out.println("a = " + a + ", b = " + b +", b = " + c);
 //            System.out.println("middle = " + middle(a, b, c));
 //        }
-        Q13();
+        spira(10);
+        npira(10);
     }
 
     static int max4(int a, int b, int c, int d) {
@@ -162,9 +163,82 @@ public class Chap_1_1 {
         int n = scanner.nextInt();
 
         System.out.println("사각형을 출력합니다.");
-        System.out.println("단 수: ");
-        for (int i = 0; i < scanner.nextInt(); i++) {
+        System.out.println("단 수: " + n);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 
+    static void triangleLB(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void triangleLU(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = n-i; j > 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void triangleRU(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = n-i; j > 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void triangleRB(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = (n-1)-i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i+1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void spira(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+
+            int j = (i - 1) * 2 + 1;
+            for (int k = 0; k < j; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void npira(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+
+            int j = (i - 1) * 2 + 1;
+            for (int k = 0; k < j; k++) {
+                System.out.print(i%10);
+            }
+            System.out.println();
         }
     }
 }
