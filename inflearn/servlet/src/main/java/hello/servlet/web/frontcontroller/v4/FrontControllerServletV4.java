@@ -22,8 +22,8 @@ public class FrontControllerServletV4 extends HttpServlet {
     private Map<String, ControllerV4> controllerMap = new HashMap<>();
 
     public FrontControllerServletV4() {
-        controllerMap.put("/front-controller/v4/members/new-form", new MemberFormControllerV4());
         controllerMap.put("/front-controller/v4/members/save", new MemberSaveControllerV4());
+        controllerMap.put("/front-controller/v4/members/new-form", new MemberFormControllerV4());
         controllerMap.put("/front-controller/v4/members", new MemberListControllerV4());
     }
 
