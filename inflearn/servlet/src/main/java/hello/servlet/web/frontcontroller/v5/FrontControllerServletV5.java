@@ -47,6 +47,7 @@ public class FrontControllerServletV5 extends HttpServlet {
         handlerAdapters.add(new ControllerV4HandlerAdapter());
     }
 
+    //실제 동작 로직
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
