@@ -32,7 +32,12 @@ public class StreamApi {
         notClosed.forEach(clazz -> System.out.println(clazz.toString()));
 
         springClasses.stream()
-                .filter(Predicate.not(OnlineClass::isClosed))
+                .filter(new Predicate<OnlineClass>() {
+                    @Override
+                    public boolean test(OnlineClass onlineClass) {
+                        return false;
+                    }
+                })
                         .forEach(onlineClass -> System.out.println(onlineClass.getId()));
 
         System.out.println("===============수업 이름만 모아서 스트림 만들기");
