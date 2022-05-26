@@ -9,8 +9,6 @@ public class Chap2_2 {
         int num = scanner.nextInt();
 
         int[] ints = new int[num];
-        assign
-
 
         show(ints);
         for (int i = 0; i < num / 2; i++) {
