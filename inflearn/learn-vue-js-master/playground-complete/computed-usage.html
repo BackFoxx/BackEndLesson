@@ -21,16 +21,17 @@
     new Vue({
       el: '#app',
       data: {
-        // cname: 'blue-text',
+        cname: 'blue-text',
         isError: false
       },
       computed: {
         errorTextColor: function() {
           // if (isError) {
-          //   return 'warning'
+            // return 'warning'
           // } else {
-          //   return null;
+            // return null;
           // }
+
           return this.isError ? 'warning' : null;
         }
       }
