@@ -8,12 +8,18 @@
 </template>
 
 <script>
-import data from "../data";
 import commentListItem from "./CommentListItem";
 import commentCreate from "./CommentCreate";
+import { findComment, findUser } from "../service";
 
-function getComments() {
-  return data.Comment.filter(item => item.content_id === this.contentId);
+async function loadComments() {
+  const ret = await findComment({content_id: this.contentId});
+  const comments = ret.data;
+  for (let comment of comments) {
+    const user_ret = await findUser({user_id: comment.user_id});
+    comment = Object.assign(comment, {name: user_ret.data.name});
+  }
+  this.comments = comments;
 }
 
 export default {
@@ -22,17 +28,20 @@ export default {
     commentListItem,
     commentCreate
   },
+  created() {
+    loadComments.call(this);
+  },
   props: {
     contentId: Number,
   },
   data() {
     return {
-      comments: getComments.call(this)
+      comments: []
     }
   },
   methods: {
     reloadComment() {
-      this.comments = getComments.call(this);
+      loadComments.call(this);
     },
   }
 }

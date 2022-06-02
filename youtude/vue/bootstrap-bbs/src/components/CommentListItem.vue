@@ -2,7 +2,7 @@
   <div>
     <div class="comment-list-item">
       <div class="comment-list-item-name">
-        <div>{{name}}</div>
+        <div>{{commentObj.name}}</div>
         <div>{{commentObj.created_at}}</div>
       </div>
       <div class="comment-list-item-context">{{commentObj.context}}</div>
@@ -28,17 +28,9 @@
         </div>
         <div class="comment-list-item-context">{{item.context}}</div>
         <div class="comment-list-item-button">
-          <b-button variant="info" @click="updateSubComment(item.subcomment_id)">수정</b-button>
+          <b-button variant="info">수정</b-button>
           <b-button variant="info" @click="deleteSubComment(item.subcomment_id)">삭제</b-button>
         </div>
-        <template v-if="isSubCommentUpdateMode">
-          <CommentCreate :comment-id="commentObj.comment_id"
-                         :is-sub-comment="true"
-                         :reload-sub-comments="reloadSubComments"
-                         :subCommentToggle="subCommentToggle"
-                         :sub-comment-id-to-update="item.subcomment_id"
-                         :update-mode="true"/>
-        </template>
       </div>
     </template>
   </div>
@@ -47,6 +39,13 @@
 <script>
 import data from "../data";
 import CommentCreate from "./CommentCreate";
+import {findSubComment, findUser} from "../service";
+
+async function loadSubComments() {
+  const ret = await findSubComment({comment_id: this.commentObj.comment_id})
+  this.subCommentList = ret.data;
+}
+
 export default {
   name: 'CommentListItem',
   components: {
@@ -55,19 +54,14 @@ export default {
   props: {
     commentObj: Object,
   },
+  created() {
+    loadSubComments.call(this);
+  },
   data() {
     return {
-      name: data.User.filter(item => item.user_id === this.commentObj.user_id)[0].name,
-      subCommentList: data.SubComment.filter(
-        item => item.comment_id === this.commentObj.comment_id
-      ).map(subCommentItem => ({
-        ...subCommentItem,
-        user_name: data.User.filter(user => user.user_id === subCommentItem.user_id)[0].name
-      })),
+      name: [],
+      subCommentList: [],
       subCommentCreateToggle: false,
-
-      isSubCommentUpdateMode: false,
-      subCommentUpdateId: null
     }
   },
   methods: {
@@ -75,21 +69,12 @@ export default {
       this.subCommentCreateToggle = !this.subCommentCreateToggle;
     },
     reloadSubComments() {
-      this.subCommentList = data.SubComment.filter(
-        item => item.comment_id === this.commentObj.comment_id
-      ).map(subCommentItem => ({
-        ...subCommentItem,
-        user_name: data.User.filter(user => user.user_id === subCommentItem.user_id)[0].name
-      }));
+      loadSubComments.call(this);
     },
     deleteSubComment(subcomment_id) {
       const subcomment_index = data.SubComment.findIndex(item => item.subcomment_id === subcomment_id)
       data.SubComment.splice(subcomment_index, 1);
       this.reloadSubComments();
-    },
-    updateSubComment(subcomment_id) {
-      this.isSubCommentUpdateMode = !this.isSubCommentUpdateMode;
-      this.subCommentUpdateId = subcomment_id;
     },
   }
 

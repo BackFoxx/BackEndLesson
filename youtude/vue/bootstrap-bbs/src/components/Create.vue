@@ -7,13 +7,14 @@
       rows="3"
       max-rows="6"
     />
-    <b-button @click="uploadContent">저장</b-button>
+    <b-button @click="updateMode ? updateContent() : uploadContent()">저장</b-button>
     <b-button @click="cancle">취소</b-button>
   </div>
 </template>
 
 <script>
-import data from "../data";
+import { addContent, modifyContent, findContent } from "../service";
+
 export default {
   name: 'Create',
   data() {
@@ -21,39 +22,41 @@ export default {
       subject: '',
       context: '',
       user_id: 1,
-      createdAt: '2019-04-17 11:32:42',
-      updatedAt: null,
-      updateObject: null,
       updateMode: this.$route.params.contentId ? true : false
     }
   },
-  created() {
+  async created() {
     if (this.$route.params.contentId) {
       const contentId = Number(this.$route.params.contentId);
-      this.updateObject = data.Content.filter(item => item.content_id === contentId)[0];
-      this.subject = this.updateObject.title;
-      this.context = this.updateObject.context;
+      const ret = await findContent({
+        content_id: contentId
+      });
+      const { data } = ret;
+      this.subject = data.title;
+      this.context = data.context;
     }
   },
   methods: {
-    uploadContent() {
-      const lastContentId = data.Content.sort((a, b) => {
-        return b.content_id - a.content_id;
-      })[0].content_id;
-      const newContentId = lastContentId + 1
-
-      data.Content.push({
-        content_id: newContentId,
+    async uploadContent() {
+      await addContent({
         user_id: this.user_id,
         title: this.subject,
         context: this.context,
-        created_at: this.createdAt,
-        updated_at: this.updatedAt
-      })
+      });
 
       this.$router.push({
         path: '/board/free'
-      })
+      });
+    },
+    async updateContent() {
+      await modifyContent({
+        context_id: Number(this.$route.params.contentId),
+        title: this.subject,
+        context: this.context
+      });
+      this.$router.push({
+        path: '/board/free'
+      });
     },
     cancle() {
       this.$router.push({

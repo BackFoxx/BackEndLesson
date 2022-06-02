@@ -12,21 +12,21 @@
 </template>
 
 <script>
-import data from "../data";
-  let items = data.Content.sort((a, b) => {
-    return b.content_id - a.content_id;
-  })
-  export default {
+import { findContentList, findUser } from "../service";
+
+export default {
     name: 'Board',
+    async created() {
+      const ret = await findContentList();
+      let comments = ret.data
+      for (let comment of comments) {
+        const user_ret = await findUser({user_id: comment.user_id });
+        comment = Object.assign(comment, { user_name: user_ret.data.name })
+      }
+
+      this.items = comments;
+    },
     data() {
-      let items = data.Content.sort((a, b) => {
-        return b.content_id - a.content_id;
-      })
-
-      items = items.map(contentItem => {
-        return {...contentItem, user_name: data.User.filter(userItem => userItem.user_id === contentItem.user_id)[0].name}
-      })
-
       return {
         currentPage: 1,
         perPage: 10,
@@ -47,7 +47,7 @@ import data from "../data";
             key: 'user_name',
             label: '작성자'
           }],
-        items: items
+        items: []
       }
     },
     methods: {
