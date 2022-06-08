@@ -6,10 +6,13 @@ import Vuetify from "vuetify";
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 
 new Vue({
   router,
   store,
+  beforeCreate() {
+    this.$store.dispatch('getMemberInfo');
+  },
   render: h => h(App)
 }).$mount('#app')

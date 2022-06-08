@@ -2,7 +2,10 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/login">로그인</router-link>
+      <router-link v-if="!isLogin" to="/login">로그인</router-link>
+      <router-link v-if="isLogin" to="to" @click.native="$store.dispatch('logout')">로그아웃</router-link>
+      <span v-if="isLogin"> | </span>
+      <router-link v-if="isLogin" to="/myPage">마이페이지</router-link>
     </nav>
     <nav v-if="isLogin">
       웰컴
@@ -32,9 +35,6 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 
 <script>

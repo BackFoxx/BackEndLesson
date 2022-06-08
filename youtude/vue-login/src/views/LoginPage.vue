@@ -49,7 +49,7 @@ export default {
     ...mapState(['isLogin', 'isLoginError'])
   },
   methods: {
-    ...mapActions(['login'])
+    ...mapActions(['login']),
   }
 }
 </script>
