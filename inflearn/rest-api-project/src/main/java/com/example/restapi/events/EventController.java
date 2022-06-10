@@ -1,9 +1,11 @@
 package com.example.restapi.events;
 
+import com.example.restapi.common.ErrorsResource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -31,13 +33,13 @@ public class EventController {
     public ResponseEntity createEvent(@RequestBody @Validated EventDto eventDto,
                                       Errors errors) {
         if (errors.hasErrors()) {
-            return ResponseEntity.badRequest().body(errors);
+            return badRequest(errors);
         }
 
         eventValidator.validate(eventDto, errors);
 
         if (errors.hasErrors()) {
-            return ResponseEntity.badRequest().body(errors);
+            return badRequest(errors);
         }
 
         Event event = modelMapper.map(eventDto, Event.class);
@@ -53,15 +55,20 @@ public class EventController {
 //        eventResource.add(selfLinkBuilder.withSelfRel());
 //        eventResource.add(selfLinkBuilder.withRel("update-event"));
         // ==
-//        EntityModel<Event> eventEntityModel = EntityModel.of(newEvent,
-//                selfLinkBuilder.slash(event.getId()).withSelfRel(),
-//                selfLinkBuilder.withRel("query-events"),
-//                selfLinkBuilder.withRel("update-event"));
+        EntityModel<Event> eventEntityModel = EntityModel.of(newEvent,
+                selfLinkBuilder.slash(event.getId()).withSelfRel(),
+                selfLinkBuilder.withRel("query-events"),
+                selfLinkBuilder.withRel("update-event"),
+                Link.of("/docs/index.html#resource-events-create").withRel("profile"));
         // ==
-        EventResourceV2 eventResourceV2 = new EventResourceV2(event);
-        eventResourceV2.addQueryEvents();
-        eventResourceV2.addUpdateEvent();
+//        EventResourceV2 eventResourceV2 = new EventResourceV2(event);
+//        eventResourceV2.addQueryEvents();
+//        eventResourceV2.addUpdateEvent();
 
-        return ResponseEntity.created(createdUri).body(eventResourceV2);
+        return ResponseEntity.created(createdUri).body(eventEntityModel);
+    }
+
+    private ResponseEntity<ErrorsResource> badRequest(Errors errors) {
+        return ResponseEntity.badRequest().body(new ErrorsResource(errors));
     }
 }

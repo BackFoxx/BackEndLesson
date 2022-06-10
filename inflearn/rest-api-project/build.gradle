@@ -1,8 +1,8 @@
 plugins {
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'org.asciidoctor.convert' version '1.5.8'
     id 'java'
+    id 'org.asciidoctor.jvm.convert' version '3.3.2' // 1. Ascii 파일을 컨버팅하고 Build 폴더에 복사하기 위한 플러그인
 }
 
 group = 'com.example'
@@ -13,6 +13,7 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    asciidoctorExtensions
 }
 
 repositories {
@@ -20,7 +21,7 @@ repositories {
 }
 
 ext {
-    set('snippetsDir', file("build/generated-snippets"))
+    snippetsDir = file('build/generated-snippets')
 }
 
 dependencies {
@@ -31,22 +32,34 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     testImplementation 'org.projectlombok:lombok'
     compileOnly 'org.postgresql:postgresql'
-//    testImplementation 'com.h2database:h2'
-    runtimeOnly 'com.h2database:h2'
+    testImplementation 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
-//    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+    // 5. restdoc에 mockmvc를 사용할 수 있게 하는 라이브러리
+    asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
 
     implementation 'org.modelmapper:modelmapper:3.1.0'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
-tasks.named('test') {
+test {
     outputs.dir snippetsDir
     useJUnitPlatform()
 }
 
-tasks.named('asciidoctor') {
+asciidoctor {
+    configurations 'asciidoctorExtensions'
     inputs.dir snippetsDir
-    dependsOn test
+    dependsOn test // 2. test -> asciidoctor 순으로 진행한다. gradle의 dependsOn은 task 전에 수행할 task를 설정해준다.
 }
+
+bootJar {
+    dependsOn asciidoctor // 3. asciidoctor -> bootJar 순으로 진행한다.
+    copy {
+        from "${asciidoctor.outputDir}"
+        into 'src/main/resources/static/docs'
+        // gradle build시 ${asciidoctor.outputDir}에 html파일이 생기는데,
+        // 이 파일을 into 경로에 복사해준다.
+    }
+}
+
