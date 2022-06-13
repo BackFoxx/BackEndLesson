@@ -21,8 +21,8 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class) // @Mock 을 이용해서 목 객체를 만들 수 있음
 class StudyServiceTest {
 
-//    @Mock MemberService memberService;
-//    @Mock StudyRepository studyRepository;
+    @Mock MemberService memberService;
+    @Mock StudyRepository studyRepository;
 
     @Test
     @DisplayName("객체 생성에 필요한 의존관계를 Mock을 이용해 대신 주입")
@@ -34,7 +34,7 @@ class StudyServiceTest {
 
     @Test
     @DisplayName("when을 이용해 특정 동작 실행시 리턴되는 값 정하기")
-    void createStudyService2(@Mock MemberService memberService)  {
+    void createStudyService2()  {
         Member member = new Member();
         member.setId(1L);
         member.setEmail("keesun@gmail.com");

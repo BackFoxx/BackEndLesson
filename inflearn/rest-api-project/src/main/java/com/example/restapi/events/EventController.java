@@ -4,19 +4,21 @@ import com.example.restapi.common.ErrorsResource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.MediaTypes;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.*;
+import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.Optional;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
@@ -28,6 +30,28 @@ public class EventController {
     private final EventRepository eventRepository;
     private final ModelMapper modelMapper;
     private final EventValidator eventValidator;
+
+    @GetMapping
+    public ResponseEntity queryEvents(Pageable pageable, PagedResourcesAssembler<Event> assembler) {
+        Page<Event> page = this.eventRepository.findAll(pageable);
+        var resource = assembler.toModel(page,
+                (RepresentationModelAssembler<Event, RepresentationModel<?>>) entity -> new EventResourceV2(entity));
+        resource.add(Link.of("/docs/index.html#resources-events-list").withRel("profile"));
+        return ResponseEntity.ok(resource);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity getEvent(@PathVariable Integer id) {
+        Optional<Event> optionalEvent = this.eventRepository.findById(id);
+        if (optionalEvent.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Event event = optionalEvent.get();
+        EventResourceV2 eventResource = new EventResourceV2(event);
+        eventResource.add(Link.of("/docs/index.html#resources-events-get").withRel("profile"));
+        return ResponseEntity.ok(eventResource);
+    }
 
     @PostMapping
     public ResponseEntity createEvent(@RequestBody @Validated EventDto eventDto,
@@ -66,6 +90,37 @@ public class EventController {
 //        eventResourceV2.addUpdateEvent();
 
         return ResponseEntity.created(createdUri).body(eventEntityModel);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity updateEvent(@PathVariable Integer id,
+                                      @Validated @RequestBody EventDto updateEvent,
+                                      Errors errors) {
+        // 수정할 이벤트 항목이 이상하면 400
+        if (errors.hasErrors()) {
+            return this.badRequest(errors);
+        }
+
+        this.eventValidator.validate(updateEvent, errors);
+
+        if (errors.hasErrors()) {
+            return this.badRequest(errors);
+        }
+
+        Optional<Event> optionalEvent = this.eventRepository.findById(id);
+        // 수정할 이벤트가 없으면 404
+        if (optionalEvent.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Event event = optionalEvent.get();
+        this.modelMapper.map(updateEvent, event);
+        Event updatedEvent = this.eventRepository.save(event);
+
+        EventResourceV2 eventResource = new EventResourceV2(updatedEvent);
+        eventResource.add(Link.of("/docs/index.html#resources-events-update").withRel("profile"));
+
+        return ResponseEntity.ok(eventResource);
     }
 
     private ResponseEntity<ErrorsResource> badRequest(Errors errors) {
