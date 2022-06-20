@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="demo">
-        <class>com.example.demo.domain.Member</class>
-        <class>com.example.demo.domain.Board</class>
+
+        <class>com.example.demo.domainV2.MemberV2</class>
+        <class>com.example.demo.domainV2.ProductV2</class>
+        <class>com.example.demo.domainV2.OrderV2</class>
+
+<!--        <class>com.example.demo.domain.Member</class>-->
+<!--        <class>com.example.demo.domain.Product</class>-->
+<!--        <class>com.example.demo.domain.MemberProduct</class>-->
+<!--        <class>com.example.demo.domain.Team</class>-->
+<!--        <class>com.example.demo.domain.Board</class>-->
 
         <properties>
 
@@ -16,7 +24,7 @@
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.use_sql_comments" value="true" />
+            <property name="hibernate.use_sql_comments" value="false" />
             <property name="hibernate.id.new_generator_mappings" value="true" />
 
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
