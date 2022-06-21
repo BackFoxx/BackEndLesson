@@ -2,15 +2,10 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="demo">
 
-        <class>com.example.demo.domainV2.MemberV2</class>
-        <class>com.example.demo.domainV2.ProductV2</class>
-        <class>com.example.demo.domainV2.OrderV2</class>
-
-<!--        <class>com.example.demo.domain.Member</class>-->
-<!--        <class>com.example.demo.domain.Product</class>-->
-<!--        <class>com.example.demo.domain.MemberProduct</class>-->
-<!--        <class>com.example.demo.domain.Team</class>-->
-<!--        <class>com.example.demo.domain.Board</class>-->
+        <class>com.example.demo.inheritance.비식별복합키_EmbeddedId.Parent</class>
+        <class>com.example.demo.inheritance.비식별복합키_EmbeddedId.ParentId</class>
+<!--        <class>com.example.demo.inheritance.비식별복합키_IdClass.Parent</class>-->
+<!--        <class>com.example.demo.inheritance.비식별복합키_IdClass.ParentId</class>-->
 
         <properties>
 
