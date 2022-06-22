@@ -3,14 +3,19 @@ package com.example.demo;
 import com.example.demo.inheritance.비식별복합키_EmbeddedId.ParentId;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
 @Slf4j
 public class JustMain {
     public static void main(String[] args) {
-//        EntityManagerFactory factory = Persistence.createEntityManagerFactory("demo");
-//        EntityManager em = factory.createEntityManager();
-//        EntityTransaction tx = em.getTransaction();
-//
-//        tx.begin();
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("demo");
+        EntityManager em = factory.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        tx.begin();
 
 //        Parent parent = new Parent();
 //        ParentId parentId = new ParentId("myId1", "myId2");
@@ -57,7 +62,8 @@ public class JustMain {
 //        System.out.println("findMember = " + findMember.getUsername());
 //        System.out.println("findOrder = " + findOrder.getOrderAmount());
 
-//        tx.commit();
-//        em.close();
+        tx.commit();
+        em.close();
+        factory.close();
     }
 }

@@ -2,10 +2,8 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="demo">
 
-        <class>com.example.demo.inheritance.비식별복합키_EmbeddedId.Parent</class>
-        <class>com.example.demo.inheritance.비식별복합키_EmbeddedId.ParentId</class>
-<!--        <class>com.example.demo.inheritance.비식별복합키_IdClass.Parent</class>-->
-<!--        <class>com.example.demo.inheritance.비식별복합키_IdClass.ParentId</class>-->
+        <class>com.example.demo.영속성전이.Child</class>
+        <class>com.example.demo.영속성전이.Parent</class>
 
         <properties>
 
