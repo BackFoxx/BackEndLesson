@@ -2,8 +2,11 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="demo">
 
-        <class>com.example.demo.영속성전이.Child</class>
-        <class>com.example.demo.영속성전이.Parent</class>
+<!--        <class>com.example.demo.쿼리언어.dto.UserDto</class>-->
+        <class>com.example.demo.쿼리언어.entity.Member</class>
+        <class>com.example.demo.쿼리언어.entity.Orders</class>
+        <class>com.example.demo.쿼리언어.entity.Product</class>
+        <class>com.example.demo.쿼리언어.entity.Team</class>
 
         <properties>
 
