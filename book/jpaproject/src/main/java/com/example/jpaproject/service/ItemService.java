@@ -24,12 +24,12 @@ public class ItemService {
     }
 
     public Item findOne(Long itemId) {
-        return itemRepository.findOne(itemId);
+        return itemRepository.findById(itemId).get();
     }
 
     @Transactional
     public void updateItem(Long id, String name, int price) {
-        Item item = itemRepository.findOne(id);
+        Item item = itemRepository.findById(id).get();
         item.setName(name);
         item.setPrice(price);
     }

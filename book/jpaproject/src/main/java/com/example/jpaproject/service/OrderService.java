@@ -1,5 +1,6 @@
 package com.example.jpaproject.service;
 
+import com.example.jpaproject.domain.OrderSearch;
 import com.example.jpaproject.entity.*;
 import com.example.jpaproject.entity.item.Item;
 import com.example.jpaproject.repository.ItemRepository;
@@ -23,8 +24,8 @@ public class OrderService {
     @Transactional
     public Long order(Long memberId, Long itemId, int count) {
         // 엔티티 조회
-        Member member = memberRepository.findOne(memberId);
-        Item item = itemRepository.findOne(itemId);
+        Member member = memberRepository.findById(memberId).get();
+        Item item = itemRepository.findById(itemId).get();
 
         // 배송정보 생성
         Delivery delivery = new Delivery();
@@ -45,12 +46,12 @@ public class OrderService {
     /* 주문 취소 */
     @Transactional
     public void cancelOrder(Long orderId) {
-        Order order = orderRepository.findOne(orderId);
+        Order order = orderRepository.findById(orderId).get();
         order.cancel();
     }
 
     /* 주문 검색 */
     public List<Order> findOrders(OrderSearch orderSearch) {
-        return orderRepository.findAllByString(orderSearch);
+        return orderRepository.findAll(orderSearch.toSpecification());
     }
 }

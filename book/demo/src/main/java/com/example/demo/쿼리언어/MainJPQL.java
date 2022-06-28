@@ -1,10 +1,13 @@
 package com.example.demo.쿼리언어;
 
 import com.example.demo.쿼리언어.entity.Member;
+import com.example.demo.쿼리언어.entity.Orders;
 import com.example.demo.쿼리언어.entity.Team;
 
 import javax.persistence.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainJPQL {
     public static void main(String[] args) {
@@ -121,5 +124,24 @@ public class MainJPQL {
         System.out.println("findMember.getId() = " + findMember.getId());
         System.out.println("findMember.getUsername() = " + findMember.getUsername());
         System.out.println("findMember.getAge() = " + findMember.getAge());
+
+        /* 엔티티 그래프 */
+//        EntityGraph graph = em.getEntityGraph("Member.withOrder");
+//        Map hints = new HashMap<>();
+//        hints.put("javax.persistence.fetchgraph", graph);
+//
+//        em.find(Member.class, 1L, hints);
+
+        /* 동적 엔티티 그래프 */
+        EntityGraph<Orders> graph = em.createEntityGraph(Orders.class);
+        graph.addAttributeNodes("member");
+
+        Subgraph<Team> team = graph.addSubgraph("team");
+        team.addAttributeNodes("team");
+
+        Map hints = new HashMap();
+        hints.put("javax.persistence.fetchgraph", graph);
+
+        Orders orders = em.find(Orders.class, 1L, hints);
     }
 }

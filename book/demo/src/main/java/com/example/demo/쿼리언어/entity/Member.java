@@ -14,6 +14,7 @@ import java.util.List;
         name = "Member.findByUsername",
         query = "select m from Member m where m.username = :username"
 )
+@Cacheable
 public class Member {
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")

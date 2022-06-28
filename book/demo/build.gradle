@@ -19,6 +19,9 @@ dependencies {
     implementation 'org.hibernate:hibernate-entitymanager:5.6.9.Final'
     // hibernate가 jpa 구현체로 동작하도록 JPA 표준을 구현한 라이브러리
 
+    implementation 'org.hibernate:hibernate-ehcache:5.6.9.Final'
+    // 캐시
+
     implementation 'com.querydsl:querydsl-jpa'
     annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jpa"
     annotationProcessor "jakarta.annotation:jakarta.annotation-api"

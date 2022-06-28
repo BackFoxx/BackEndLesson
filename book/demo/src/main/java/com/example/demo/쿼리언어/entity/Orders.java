@@ -2,6 +2,12 @@ package com.example.demo.쿼리언어.entity;
 
 import javax.persistence.*;
 
+@NamedEntityGraph(name = "Order.withAll",
+attributeNodes = {
+        @NamedAttributeNode(value = "member", subgraph = "team"),
+},
+subgraphs = @NamedSubgraph(name = "team", attributeNodes = @NamedAttributeNode("team"))
+)
 @Entity
 public class Orders {
     @Id @GeneratedValue

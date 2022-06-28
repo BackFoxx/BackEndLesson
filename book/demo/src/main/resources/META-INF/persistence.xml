@@ -2,6 +2,8 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="demo">
 
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+
 <!--        <class>com.example.demo.쿼리언어.dto.UserDto</class>-->
         <class>com.example.demo.쿼리언어.entity.Member</class>
         <class>com.example.demo.쿼리언어.entity.Orders</class>
@@ -9,6 +11,16 @@
         <class>com.example.demo.쿼리언어.entity.Team</class>
 
         <properties>
+
+            <!-- 2차 캐시 활성화 -->
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <!-- 쿼리 캐시 활성화 -->
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+            <!-- 2차 캐시를 처리할 클래스 -->
+            <property name="hibernate.cache.region.factory_class"
+                      value="org.hibernate.cache.ehcache.internal.EhcacheRegionFactory"/>
+            <!-- ?? -->
+            <property name="hibernate.generate_statistics" value="true"/>
 
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>

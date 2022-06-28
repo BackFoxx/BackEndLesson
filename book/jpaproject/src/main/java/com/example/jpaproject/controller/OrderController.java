@@ -2,7 +2,7 @@ package com.example.jpaproject.controller;
 
 import com.example.jpaproject.entity.Member;
 import com.example.jpaproject.entity.Order;
-import com.example.jpaproject.entity.OrderSearch;
+import com.example.jpaproject.domain.OrderSearch;
 import com.example.jpaproject.entity.item.Item;
 import com.example.jpaproject.service.ItemService;
 import com.example.jpaproject.service.MemberService;
