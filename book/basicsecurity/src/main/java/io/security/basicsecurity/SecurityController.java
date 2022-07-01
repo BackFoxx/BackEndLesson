@@ -13,20 +13,18 @@ import javax.servlet.http.HttpSession;
 public class SecurityController {
     @GetMapping("/")
     public String index(HttpSession session) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        SecurityContext context = (SecurityContext) session.getAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY);
-        Authentication authentication1 = context.getAuthentication();
-
         return "home";
+    }
+
+    @GetMapping("/user")
+    public String user() {
+        return "user";
     }
 
     @GetMapping("/thread")
     public String thread() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            }
+        new Thread(() -> {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         }).start();
         return "thread";
     }
@@ -34,11 +32,6 @@ public class SecurityController {
     @GetMapping("/loginPage")
     public String loginPage() {
         return "loginPage";
-    }
-
-    @GetMapping("/user")
-    public String user() {
-        return "user";
     }
 
     @GetMapping("/admin/pay")
