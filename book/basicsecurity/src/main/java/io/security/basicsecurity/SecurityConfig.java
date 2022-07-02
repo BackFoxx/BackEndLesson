@@ -13,7 +13,6 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/user").hasRole("USER")
                 .anyRequest().permitAll();
         http
                 .formLogin();
