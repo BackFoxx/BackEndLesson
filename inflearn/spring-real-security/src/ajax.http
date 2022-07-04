@@ -1,0 +1,9 @@
+### 비동기 통신으로 POST 요청 보내기
+POST http://localhost:8080/api/login
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{
+  "username": "user",
+  "password": 1111
+}

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca0c1594-b2c5-4f12-928b-819dc753f9c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-real-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-real-security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-real-security/src/main/java/com/example/springrealsecurity/security/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-real-security/src/main/java/com/example/springrealsecurity/security/configs/SecurityConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="ca0c1594-b2c5-4f12-928b-819dc753f9c3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +43,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "9808cc022049e71cc4d8e9992f4350ed",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -73,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656748373678</updated>
       <workItem from="1656748375034" duration="5346000" />
+      <workItem from="1656833721056" duration="6000" />
     </task>
     <servers />
   </component>
