@@ -1,4 +1,4 @@
-package com.example.springrealsecurity.repository;
+package com.example.springrealsecurity.security.repository;
 
 import com.example.springrealsecurity.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;

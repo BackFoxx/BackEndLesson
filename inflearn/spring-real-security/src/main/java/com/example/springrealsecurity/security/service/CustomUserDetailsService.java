@@ -1,7 +1,7 @@
 package com.example.springrealsecurity.security.service;
 
 import com.example.springrealsecurity.domain.Account;
-import com.example.springrealsecurity.repository.UserRepository;
+import com.example.springrealsecurity.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,9 +1,24 @@
-### 비동기 통신으로 POST 요청 보내기
+### 비동기 통신으로 POST 요청 보내기(유저)
 POST http://localhost:8080/api/login
 Content-Type: application/json
 X-Requested-With: XMLHttpRequest
 
 {
-  "username": "user",
+  "username": "hello",
   "password": 1111
 }
+
+### 비동기 통신으로 POST 요청 보내기(매니저)
+POST http://localhost:8080/api/login
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{
+"username": "manager",
+"password": 1111
+}
+
+### 비동기 통신으로 GET 요청 보내기
+GET http://localhost:8080/api/messages
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest

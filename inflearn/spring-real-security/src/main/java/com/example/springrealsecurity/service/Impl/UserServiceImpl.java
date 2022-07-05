@@ -1,7 +1,7 @@
 package com.example.springrealsecurity.service.Impl;
 
 import com.example.springrealsecurity.domain.Account;
-import com.example.springrealsecurity.repository.UserRepository;
+import com.example.springrealsecurity.security.repository.UserRepository;
 import com.example.springrealsecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
