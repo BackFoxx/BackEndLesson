@@ -40,7 +40,6 @@ public class AjaxSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
         http
                 .antMatcher("/api/**")
                 .authorizeRequests()
