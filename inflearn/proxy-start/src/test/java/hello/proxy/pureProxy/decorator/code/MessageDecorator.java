@@ -1,4 +1,4 @@
-package hello.proxy.pureProxy.decorater.code;
+package hello.proxy.pureproxy.decorator.code;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,9 +13,11 @@ public class MessageDecorator implements Component {
     @Override
     public String operation() {
         log.info("MessageDecorator 실행");
-        String result = component.operation();
-        String decoResult = "***" + result + "***";
-        log.info("MessageDeorator 꾸미기 적용 {} 후 {}", result, decoResult);
+
+        String result = this.component.operation();
+        String decoResult = "*****" + result + "*****";
+        log.info("MessageDecorator 꾸미기 적용 전 = {}", result, decoResult);
+
         return decoResult;
     }
 }

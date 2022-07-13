@@ -1,4 +1,4 @@
-package hello.proxy.pureProxy.proxy.code;
+package hello.proxy.pureproxy.proxy.code;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,7 +15,7 @@ public class RealSubject implements Subject {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

@@ -1,4 +1,4 @@
-package hello.proxy.pureProxy.concreteProxy.code;
+package hello.proxy.pureproxy.concreteproxy.code;
 
 public class ConcreteClient {
     private ConcreteLogic concreteLogic;
@@ -8,6 +8,6 @@ public class ConcreteClient {
     }
 
     public void execute() {
-        concreteLogic.operation();
+        this.concreteLogic.operation();
     }
 }

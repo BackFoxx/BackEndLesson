@@ -1,5 +1,6 @@
-package hello.proxy.pureProxy.decorater.code;
+package hello.proxy.pureproxy.decorator.code;
 
+import hello.proxy.pureproxy.decorator.code.Component;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -13,14 +14,13 @@ public class TimeDecorator implements Component {
     @Override
     public String operation() {
         log.info("TimeDecorator 실행");
-
         long startTime = System.currentTimeMillis();
-        String result = component.operation();
+
+        String result = this.component.operation();
+
         long endTime = System.currentTimeMillis();
-
         long resultTime = endTime - startTime;
-        log.info("TimeDecorator 종료 resultTime = {}", resultTime);
-
+        log.info("TimeDecorator 종료 resultTime = {}ms", resultTime);
         return result;
     }
 }

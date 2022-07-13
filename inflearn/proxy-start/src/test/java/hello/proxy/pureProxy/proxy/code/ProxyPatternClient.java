@@ -1,4 +1,4 @@
-package hello.proxy.pureProxy.proxy.code;
+package hello.proxy.pureproxy.proxy.code;
 
 public class ProxyPatternClient {
     private Subject subject;
@@ -8,6 +8,6 @@ public class ProxyPatternClient {
     }
 
     public void execute() {
-        subject.operation();
+        this.subject.operation();
     }
 }

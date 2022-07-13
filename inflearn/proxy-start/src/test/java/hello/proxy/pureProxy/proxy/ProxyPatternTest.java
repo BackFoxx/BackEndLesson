@@ -1,15 +1,16 @@
-package hello.proxy.pureProxy.proxy;
+package hello.proxy.pureproxy.proxy;
 
-import hello.proxy.pureProxy.proxy.code.CacheProxy;
-import hello.proxy.pureProxy.proxy.code.ProxyPatternClient;
-import hello.proxy.pureProxy.proxy.code.RealSubject;
-import hello.proxy.pureProxy.proxy.code.Subject;
+import hello.proxy.pureproxy.proxy.code.CacheProxy;
+import hello.proxy.pureproxy.proxy.code.ProxyPatternClient;
+import hello.proxy.pureproxy.proxy.code.RealSubject;
+import hello.proxy.pureproxy.proxy.code.Subject;
 import org.junit.jupiter.api.Test;
 
+/* 프록시 패턴 */
 public class ProxyPatternTest {
     @Test
     void noProxyTest() {
-        Subject realSubject = new RealSubject();
+        RealSubject realSubject = new RealSubject();
         ProxyPatternClient client = new ProxyPatternClient(realSubject);
         client.execute();
         client.execute();
@@ -19,9 +20,8 @@ public class ProxyPatternTest {
     @Test
     void cacheProxyTest() {
         RealSubject realSubject = new RealSubject();
-        CacheProxy cacheProxy = new CacheProxy(realSubject);
+        Subject cacheProxy = new CacheProxy(realSubject);
         ProxyPatternClient client = new ProxyPatternClient(cacheProxy);
-
         client.execute();
         client.execute();
         client.execute();

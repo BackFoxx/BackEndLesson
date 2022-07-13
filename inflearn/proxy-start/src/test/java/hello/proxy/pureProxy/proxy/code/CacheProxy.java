@@ -1,4 +1,4 @@
-package hello.proxy.pureProxy.proxy.code;
+package hello.proxy.pureproxy.proxy.code;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,9 +14,9 @@ public class CacheProxy implements Subject {
     @Override
     public String operation() {
         log.info("프록시 호출");
-        if (cacheValue == null) {
-            cacheValue = target.operation();
+        if (this.cacheValue == null) {
+            this.cacheValue = this.target.operation();
         }
-        return cacheValue;
+        return this.cacheValue;
     }
 }
