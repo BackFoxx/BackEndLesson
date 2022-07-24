@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <aop:aspectj-autoproxy />
+
+    <bean id="myAspect" class="com.example.expertspring30.aop.MyAspect" />
+    <bean id="boy" class="com.example.expertspring30.aop.Boy" />
+    <bean id="girl" class="com.example.expertspring30.aop.Girl" />
+
+    <aop:config>
+        <aop:aspect ref="myAspect">
+            <aop:before method="before" pointcut="execution(* runSomething())" />
+        </aop:aspect>
+    </aop:config>
+</beans>

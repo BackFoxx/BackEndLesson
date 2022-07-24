@@ -1,6 +1,6 @@
 package hello.aop.order.aop.exam;
 
-import hello.aop.order.aop.exam.annotation.Trace;
+import hello.aop.order.aop.exam.annotation.Retry;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -11,7 +11,7 @@ public class ExamRepository {
     /*
      * 5번에 한 번씩 실패
      * */
-    @Trace
+    @Retry(4)
     public String save(String itemId) {
         seq++;
         if (seq % 5 == 0) {
