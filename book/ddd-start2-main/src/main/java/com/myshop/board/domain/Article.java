@@ -1,5 +1,7 @@
 package com.myshop.board.domain;
 
+import com.myshop.blog.회원;
+
 import javax.persistence.*;
 
 @Entity
@@ -44,5 +46,9 @@ public class Article {
 
     public ArticleContent getContent() {
         return content;
+    }
+
+    public 회원 getWriter() {
+        return new 회원();
     }
 }
